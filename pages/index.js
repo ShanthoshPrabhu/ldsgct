@@ -1,5 +1,6 @@
 import { useSession } from 'next-auth/react'
 import Head from 'next/head'
+import Navbar from '../shared/Navbar';
 
 
 export default function Home() {
@@ -11,7 +12,9 @@ export default function Home() {
       </Head>
 
       <main>
+         <Navbar/>
          <div>LDS</div>
+        
       </main>
     </div>
   )
