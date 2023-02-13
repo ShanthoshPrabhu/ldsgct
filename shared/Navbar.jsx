@@ -23,7 +23,7 @@ const Navbar = () => {
 
         <div
           onClick={() => setOpen(!open)}
-          className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'
+          className='absolute text-3xl cursor-pointer right-8 top-6 md:hidden'
         >
           <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
         </div>

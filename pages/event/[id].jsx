@@ -13,7 +13,7 @@ import Image from 'next/image';
 const EventPage = () => {
     const router = useRouter()
    const handleClick = () => {
-     router.push("register")
+     router.push("/register")
    }
   
   console.log("specificEvent", data )
