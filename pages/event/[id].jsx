@@ -92,21 +92,25 @@ return (
                                   <div className='my-5 text-2xl font-bold text-white xl:text-3xl 2xl:text-3xl lg:2xl md:2xl sm:lg'>
                                     Rules:
                                   </div>
-                                <div className='text-lg font-bold text-white'>Prelims:</div>
+                               
                                   {
                                     event.rules.prelims && (
+                                    <div>     
+                                      <div className='text-lg font-bold text-white'>Prelims:</div>
                                       <div className='text-sm font-semibold leading-7 xl:text-xl 2xl:text-xl md:text-lg lg:text-lg sm:text-base 2xl:leading-10 xl:leading-10 lg:leading-9 md:leading-8'>
                                        <ol>
                                           {event?.rules.prelims.map((item, index) => (
                                             <li key={index} className="pl-5 p-y-1">{item}</li>
                                           ))}
                                         </ol>
-                                      </div>
+                                      </div></div>
                                     )
                                   }
-                                  <div  className='text-lg font-bold text-white'>Finals:</div>
+                                  
                                   {
                                        event.rules.finals && (
+                                     <div>
+                                         <div  className='text-lg font-bold text-white'>Finals:</div>
                                       <div className='text-sm font-semibold leading-7 xl:text-xl 2xl:text-xl md:text-lg lg:text-lg sm:text-base 2xl:leading-10 xl:leading-10 lg:leading-9 md:leading-8'>
                                        <ol>
                                           {event?.rules.finals.map((item, index) => (
@@ -114,6 +118,22 @@ return (
                                           ))}
                                         </ol>
                                       </div>
+                                     </div>
+                                    )
+                                  }
+
+                                  {
+                                       event.rules.rounds && (
+                                     <div>
+                                         {/* <div  className='text-lg font-bold text-white'>Finals:</div> */}
+                                      <div className='text-sm font-semibold leading-7 xl:text-xl 2xl:text-xl md:text-lg lg:text-lg sm:text-base 2xl:leading-10 xl:leading-10 lg:leading-9 md:leading-8'>
+                                       <ol>
+                                          {event?.rules.rounds.map((item, index) => (
+                                            <li key={index} className="pl-5 p-y-1">{item}</li>
+                                          ))}
+                                        </ol>
+                                      </div>
+                                     </div>
                                     )
                                   }
                               </div>
