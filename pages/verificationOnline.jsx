@@ -1,10 +1,11 @@
+import { useRouter } from 'next/router';
 import React from 'react'
 import Footer from '../shared/Footer';
 import Navbar from '../shared/Navbar';
-import {useRouter} from "next/router"
+
 const verificationOnline = () => {
   const router = useRouter();
-  const handleClickHome=()=>{
+  const handleHome = () => {
     router.push("/")
   }
   return (
@@ -18,8 +19,10 @@ const verificationOnline = () => {
             <p className='text-yellow-500'>Stay Tuned!</p>
             </div>
         </div>
-         <div className='flex justify-center items-center mt-10 w-40 p-3 ml-20 md:ml-24 text-center text-white duration-500 bg-yellow-500 border-gray-800 rounded-md  hover:bg-yellow-500 md:w-48'>
-            <button  onCLick={handleClickHome}>Go to Home</button>
+         <div 
+         className='flex justify-center items-center mt-10 w-40 p-3 ml-20 md:ml-24 text-center text-white duration-500 bg-yellow-500 border-gray-800 rounded-md  hover:bg-yellow-500 md:w-48'
+         onClick={handleHome}>
+            <button>Go to Home</button>
           </div>
     </div>
     <Footer/>
