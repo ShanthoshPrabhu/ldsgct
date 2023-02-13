@@ -6,12 +6,12 @@ import Navbar from '../../shared/Navbar';
 const Events = () => {
    
   return (
-    <div className="bg-red-500">
-    <div className='mt-20'>
+    <div className="bg-gradient-to-l from-[#FF9500] via-[#FFC300] to-[#FFEA00]">
+    <div className=''>
         <Navbar/>
     </div>
-    <div className=''>
-    <div className="p-10 lg:w-full lg:p-5 sm:w-80"><Cards/></div> 
+    <div className='mt-14'>
+    <div className=""><Cards/></div> 
     </div>
     </div>
   )
