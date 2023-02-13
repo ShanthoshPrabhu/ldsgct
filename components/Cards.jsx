@@ -1,9 +1,7 @@
 import React from 'react';
-import data from "../Components/EventData";
-import Card from "../Components/Card";
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-
+import data from '../shared/eventData.json'
 
 const Cards = () => {
    

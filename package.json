@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.10.5",
     "@headlessui/react": "^1.7.10",
     "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.8",
     "dotenv": "^16.0.3",
     "firebase": "^9.17.1",
     "ionicons": "^6.1.3",

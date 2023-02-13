@@ -1,43 +1,34 @@
 [
 {
-        "id": 1,
-        "link":"jam",
-        "price": 1500,
-        "location":"GCT",
-        "date":"25/02/2023",
-        "eventName": "Shipwreck",
-        "description": "Shipwreck is a contest of survival where the one’s presence of mind and sense of humour comes to the fore to save their life from an impending danger. Each contestant is assigned a character, either fictional or non-fictional (eg: Kalpana Chawla, James Bond), who is to be emulated as a crewmate in a sinking ship and they have to convince the captain to get the only extra life jacket to save themselves.",
-        "guidelines": {
-        "participation": "Individual",
-        "rounds": 2,
-        "prelims_format": "Block & Tackle",
-        "finals_format": "Shipwreck"
-        },
-        "rules": {
-        "prelims": [
-        "Each participant has to speak both for & against the topic given to them.",
-        "Total duration: 90 seconds.",
-        "Topic once given will not be taken back.",
-        "Controversial or offensive content will not be tolerated.",
-        "All other instructions will be given on the spot.",
-        "The top 6 participants will advance to the finals."
-        ],
-        "finals": [
-        "Characters once assigned cannot be changed.",
-        "Controversial or offensive content will not be tolerated.",
-        "All other instructions will be given on the spot."
-        ]
-        },
-        "prizes": {
-        "winner": 1000,
-        "runner_up": 500
-        },
-        "contact": {
-        "name": "Yassir",
-        "Phone": 6379175572
-        }
+"id": 1,
+"link":"jam",
+"price": 1500,
+"location":"GCT",
+"date":"25/02/2023",
+"eventName": "Just A Minute (JAM)",
+"description": "Just A Minute (JAM) is a fun and fast-paced event that challenges participants to speak on a given topic for one minute. It involves enabling the creative and communicative skills of a person, with the adrenaline rush of an impromptu topic.",
+"guidelines":[["Individual participation."],["It consists of 2 rounds."]],
+"rules": {
+"prelims": [
+["Prelims will be in EXTEMPORE format."],
+["Participants will each be given a scenario or a situation in which they have to speak for 1 minute."],
+["Shortlisted participants will be eligible for the finals."]
+],
+"finals": [
+["Finals will be in TAP JAM format."],
+["The finalists are required to speak fluently while their competitors scrutinize their speech for errors."],
+["Further rules will be explained before the start of the finals."]
+]
 },
-
+"prizes": {
+"winner": 1000,
+"runner_up": 500
+},
+"contact": {
+"name": "Sudhandira",
+"Phone": 9843539984
+}
+},
 {
 "id": 2,
 "link":"shipwreck",
@@ -46,12 +37,7 @@
 "date":"25/02/2023",
 "eventName": "Shipwreck",
 "description": "Shipwreck is a contest of survival where the one’s presence of mind and sense of humour comes to the fore to save their life from an impending danger. Each contestant is assigned a character, either fictional or non-fictional (eg: Kalpana Chawla, James Bond), who is to be emulated as a crewmate in a sinking ship and they have to convince the captain to get the only extra life jacket to save themselves.",
-"guidelines": {
-"participation": "Individual",
-"rounds": 2,
-"prelims_format": "Block & Tackle",
-"finals_format": "Shipwreck"
-},
+"guidelines":[["Individual participation."],["It consists of 2 rounds."],[" Prelims will be in Block & Tackle format."],["Finals will be Shipwreck"]],
 "rules": {
 "prelims": [
 ["Each participant has to speak both for & against the topic given to them."],
@@ -75,9 +61,197 @@
 "name": "Yassir",
 "Phone": 6379175572
 }
+},
+{
+"id": 3,
+"link":"poem",
+"price": 0,
+"location":"GCT",
+"date":"25/02/2023",
+"eventName": "Poem",
+"description": "This event is a stage for all the word wizards out there to bring their skills alive on paper and show off the sensational bard that lurks deep within. The participants will be given a picture about which he/she has to write a poem and entitle a topic that suits it the best.",
+"guidelines": [["Individual participation."],["It is a single round event."]],
+"rules": {
+"rounds": [
+["The poem should have a minimum of 8 lines and should not exceed 16 lines."],
+["Plagiarism should be strictly avoided."],
+["Poems containing vulgarity, profanity, and offensive/inappropriate content will not be considered for evaluation."],
+["A person is allowed to submit a maximum of 1 entry only."],
+["Time limit: 30 minutes."]
+]
+},
+"prizes": {
+"winner": 1000
+},
+"contact": {
+"name": "Meharun Halidha",
+"Phone": 9786966811
 }
-
-
-
+},
+{
+"id": 4,
+"link":"microtale",
+"price": 500,
+"location":"GCT",
+"date":"25/02/2023",
+"eventName": "Microtale",
+"description": "Are you by any chance a laconic author with a knack for crafting stories with the deepest of meanings and the fewest of words? Then this microtale contest is exactly the right place for you! So, bring out your creativity and prove your proficiency as you play with words.",
+"guidelines": [["Individual participation."],["It is a single round event."]],
+"rules": {
+"rounds": [
+["Topic will be given on the spot."],
+["The contestant has to write a tale with the given topic using less than 40 words."],
+["Plagiarism should be strictly avoided."],
+["Entries with vulgarity, profanity in content and offensive/inappropriate language will be eliminated."],
+["One entry per person is allowed."],
+["Time limit: 5 minutes."]
+]
+},
+"prizes": {
+"winner": 500
+},
+"contact": {
+"name": "Chrisstephen",
+"Phone": 9080668041
+}
+},
+{
+"id": 5,
+"link":"unoMinuto",
+"price": 1500,
+"location":"GCT",
+"date":"25/02/2023",
+"eventName": "Uno Minuto",
+"description": "Uno Minuto is a stage for all talented individuals to showcase their amazing skills within 60 seconds. Bring your props and put your skills on display in front of a live audience!",
+"guidelines":[["Individual participation."],["It consists of 2 rounds."]],
+"rules": {
+"prelims": [
+["Contestants are allowed to perform for a duration of 60 seconds only."],
+["Contestants should bring their own props."],
+["The top 6 contestants will be advancing to the final round."]
+],
+"finals": [
+["Same rules as in the prelims."],
+["One can showcase a talent different from the one performed at the prelims."],
+["In case of performing with the same skill, the content must be different from that used in the prelims."]
+]
+},
+"prizes": {
+"winner": 1000,
+"runner_up": 500
+},
+"contact": {
+"name": "Bharathkumar",
+"Phone": 9003332159
+}
+},
+{
+"id": 6,
+"link":"dumbCharades",
+"price": 3000,
+"location":"GCT",
+"date":"25/02/2023",
+"eventName": "Dumb Charades",
+"description": "Dumb Charades is a team-based competition where participants take turns guessing movies, words, or phrases by acting out clues. Put your miming skills to the test and have fun with your partner!",
+"guidelines":[["Individual participation."],["It consists of 2 rounds."]],
+"rules": {
+"prelims": [
+["Participants are not allowed to enact the exact word of the movie. They should enact the plot of that movie."],
+["Splitting words, usage of codes and references are restricted."],
+["Questions will be covering movies, day-to-day life objects and proverbs/idioms."],
+["Further rules will be explained at the venue."],
+["Shortlisted participants will advance to the finals."]
+],
+"finals": [
+["Instructions for finals will be given on the spot."]
+]
+},
+"prizes": {
+"winner": 2000,
+"runner_up": 1000
+},
+"contact": {
+"name": "Mithra",
+"Phone": 9585759005
+}
+},
+{
+"id": 7,
+"link":"puzzle",
+"price": 3000,
+"location":"GCT",
+"date":"25/02/2023",
+"eventName": "Puzzle & Crossword",
+"description": "Puzzle & Crossword is a competition for those who love puzzles, riddles, and wordplays. Show off your problem-solving skills and tackle as many puzzles as you can in the given time!",
+"guidelines":[["Maximum 2 per team"],["It consists of 2 rounds."]],
+"rules": {
+"rounds": [
+["Any team indulging in malpractice will be disqualified."],
+["Duration: 30 minutes."]
+]
+},
+"prizes": {
+"winner": 2000,
+"runner_up": 1000
+},
+"contact": {
+"name": "Harish",
+"Phone": 8925234490
+}
+},
+{
+"id": 8,
+"link":"potpourri",
+"price": 3000,
+"location":"GCT",
+"date":"25/02/2023",
+"eventName": "Pot Pourri",
+"description": "Pot Pourri is a mixture of events that test the versatility and aptitude to improvise its contestants. Put your all-round skills to the finest of tests!",
+"guidelines":[["Two participants per team"],["It consists of 2 rounds."]],
+"rules": {
+"prelims": [
+["Prelims will be a written round."],
+["The top 6 teams will advance to the finals."],
+["Further rules will be explained before the start of the event."]
+],
+"finals": [
+["Finals will be a mixture of various events."],
+["Instructions for finals will be given on the spot."]
+]
+},
+"prizes": {
+"winner": 2000,
+"runner_up": 1000
+},
+"contact": {
+"name": "Rakesh",
+"Phone": 8825817452
+}
+},
+{
+"id": 9,
+"link":"quiz",
+"price": 3000,
+"location":"GCT",
+"date":"25/02/2023",
+"eventName": "Quiz",
+"description": "This intellectual event is here to ignite the awakening of the quiz aces and is a call to all the hardcore quizzers out there. Battle it all out shrewd quiz champs, and persevere for the win while you strain brains.",
+"guidelines":[["Two participants per team"],["It consists of 2 rounds."]],
+"rules": {
+"prelims": [
+["Usage of mobile phones during the event will lead to disqualification."],
+["Prelims will strictly take place during the allotted time."],
+["The top 6 teams will be selected for finals."]
+]
+},
+"prizes": {
+"winner": 2000,
+"runner_up": 1000
+},
+"contact": {
+"name": "Kapil Varadhan",
+"Phone": 8110052002
+}
+}
 
 ]

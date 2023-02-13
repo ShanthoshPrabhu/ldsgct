@@ -1,19 +1,51 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import Navbar from '../shared/Navbar'
 import Footer from '../shared/Footer';
+import { async } from '@firebase/util';
+import { db, storage } from '../firebase';
+import { getDownloadURL, ref, uploadString } from 'firebase/storage';
+import { doc, updateDoc } from 'firebase/firestore';
+import { useSession } from 'next-auth/react';
 
 const Payment = () => {
   const [showToast, setShowToast] = useState(false);
-  const router = useRouter();
-  const handleSubmit = (e) => {
-    router.push("/verification")
-    e.preventDefault();
-    setShowToast(true);
-    setTimeout(() => {
-      setShowToast(false);
-    }, 5000);
-  };
+  const [file, setFile] = useState(null);
+  // const { data: session } = useSession();
+  const session = {
+    email:'shan@gmail.com'
+  }
+  const router = useRouter()
+//  console.log('file',file)
+  function addImage (e) {
+    const reader = new FileReader();
+  //  console.log(e)
+   if (e.target.files[0]) {
+    reader.readAsDataURL(e.target.files[0]);
+  }
+  console.log('red',reader)
+  reader.onload = (readerEvent) => {
+    console.log('readerEvent.target.result',readerEvent.target.result)
+    setFile(readerEvent.target.result)
+  }
+  // console.log(file)
+  console.log('file',file)
+}
+async function uploadData(){
+  const imageRef = ref(storage, `payments/${session?.email}/image`);
+  console.log('imgref',imageRef)
+    if (file) {
+        await uploadString(imageRef, file, "data_url")
+        .then(async () => {
+          const downloadURL = await getDownloadURL(imageRef);
+          await updateDoc(doc(db, "register", '4CVUbS4n0D213OOKiaMt'), {
+            image: downloadURL,
+          });
+        });
+     console.log('success')
+     router.push('/')
+      }
+}
   return (
     <> 
     <Navbar/>
@@ -43,14 +75,11 @@ const Payment = () => {
        </div> 
         <div className='grid justify-center grid-flow-row cursor-pointer md:grid-flow-row gap-y-24 md:gap-x-24 mt-14 md:mt-28'>
        <div className='flex flex-col items-center justify-center h-48 p-10 mx-12 bg-gray-100 border rounded-lg shadow-2xl sm:h-56 w-72 sm:w-96'>
-         <form className='grid items-center justify-center grid-flow-row'>
-          <input type="file" id="file-input" />
-        <button 
-        type="submit" 
+       <input type="file" id="file-input"  onChange={(e)=>addImage(e)}  />
+        <button  
         className=" text-white mt-5 bg-gradient-to-r  from-[#FF9500] via-[#FFC300] to-[#FFEA00] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-        onClick={handleSubmit} 
+        onClick={uploadData} 
          >Submit</button>
-         </form>
          {showToast && (
           <div className="fixed p-4 mb-4 mr-4 text-white bg-gray-800 rounded-lg shadow-lg bottom-20">
             <p>Thanks for Registering, we will contact you after verifying.</p>
