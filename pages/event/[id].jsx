@@ -31,21 +31,21 @@ const EventPage = () => {
  }
 return (    
        <div>
-            <div className="w-full justify-center flex items-center bg-gradient-to-r from-[#FF9500] via-[#FFC300] to-[#FFEA00]" > 
+            <div className="flex items-center justify-center w-full" > 
              <div className="">
                <div><Navbar/></div>
-               <div className='mt-28 sm:mt-30'> 
+               <div className='mt-20 sm:mt-30'> 
         {/*Event Details */}
                     <div className=''>
                       <div>
                         {/*Event Heading */}
                         <div className=''>
-                        <h1 className='text-4xl text-center text-white md:text-6xl md:font-light' >{event?.eventName} </h1>
+                        <h1 className='text-4xl text-center text-yellow-500 uppercase font-base md:text-6xl md:font-light' >{event?.eventName} </h1>
                         </div>
 
                               
                        <div className="">
-                         <div className='flex-row justify-center max-w-3xl gap-4 p-4 mx-auto mt-10 text-black bg-yellow-100 rounded-md sm:max-w-xl md:flex'> 
+                         <div className='flex-row justify-center max-w-3xl gap-4 p-4 mx-auto mt-4 text-black bg-yellow-100 rounded-md md:mt-10 sm:max-w-xl md:flex'> 
                         <div className='flex'>
                           <div> <LocationOnIcon/></div> 
                           <div>
@@ -74,33 +74,33 @@ return (
                             <div className='font-base'>{event.date}</div>
                           </div>
                         </div>
-                        <div className='w-32 p-4 text-center text-white bg-red-500 rounded-md cursor-pointer' onClick={handleClick}>
+                        <div className='w-32 p-4 text-center text-black bg-red-500 rounded-md cursor-pointer' onClick={handleClick}>
                           Register
                         </div>
                     </div>
                         {/*Event Content */}
                       <div>
                         {/*Event Description and Rules */}
-                          <div className="m-10 2xl:m-20 xl:m-20 ">
+                          <div className="m-10 mt-10 md:mt-28 2xl:mx-40 xl:mx-40">
                             {/*Event Description */}
                                 <div className='text-black '>
-                                                <div className='mb-5 text-lg font-bold text-white xl:text-3xl 2xl:text-3xl lg:2xl md:2xl sm:lg'>Event Description:</div>
+                                                <div className='mb-5 text-2xl font-semibold text-yellow-500 uppercase xl:text-3xl 2xl:text-3xl lg:2xl md:2xl sm:lg'>Event Description:</div>
                                                 <div className='text-sm font-semibold leading-7 xl:text-xl 2xl:text-xl md:text-lg lg:text-lg sm:text-base 2xl:leading-10 xl:leading-10 lg:leading-9 md:leading-8'>{event?.description}</div>
                                 </div>
                             {/*Event Rules */}    
                                 <div className='text-black'>
-                                  <div className='my-5 text-2xl font-bold text-white xl:text-3xl 2xl:text-3xl lg:2xl md:2xl sm:lg'>
+                                  <div className='my-5 text-2xl font-semibold text-yellow-500 uppercase xl:text-3xl 2xl:text-3xl lg:2xl md:2xl sm:lg'>
                                     Rules:
                                   </div>
                                
                                   {
                                     event.rules.prelims && (
-                                    <div>     
-                                      <div className='text-lg font-bold text-white'>Prelims:</div>
-                                      <div className='text-sm font-semibold leading-7 xl:text-xl 2xl:text-xl md:text-lg lg:text-lg sm:text-base 2xl:leading-10 xl:leading-10 lg:leading-9 md:leading-8'>
-                                       <ol>
+                                    <div className="m-2">     
+                                      <div className='text-lg text-black uppercase font-base md:text-2xl'>Prelims:</div>
+                                      <div className='ml-8 text-sm font-semibold leading-7 xl:text-xl 2xl:text-xl md:text-lg lg:text-lg sm:text-base 2xl:leading-10 xl:leading-10 lg:leading-9 md:leading-8'>
+                                       <ol className='m-2 list-disc'>
                                           {event?.rules.prelims.map((item, index) => (
-                                            <li key={index} className="pl-5 p-y-1">{item}</li>
+                                            <li key={index} className="">{item}</li>
                                           ))}
                                         </ol>
                                       </div></div>
@@ -109,31 +109,29 @@ return (
                                   
                                   {
                                        event.rules.finals && (
-                                     <div>
-                                         <div  className='text-lg font-bold text-white'>Finals:</div>
-                                      <div className='text-sm font-semibold leading-7 xl:text-xl 2xl:text-xl md:text-lg lg:text-lg sm:text-base 2xl:leading-10 xl:leading-10 lg:leading-9 md:leading-8'>
-                                       <ol>
+                                      <div className="m-2">     
+                                      <div className='text-lg text-black uppercase font-base md:text-2xl'>Finals:</div>
+                                      <div className='ml-8 text-sm font-semibold leading-7 xl:text-xl 2xl:text-xl md:text-lg lg:text-lg sm:text-base 2xl:leading-10 xl:leading-10 lg:leading-9 md:leading-8'>
+                                       <ol className='m-2 list-disc '>
                                           {event?.rules.finals.map((item, index) => (
-                                            <li key={index} className="pl-5 p-y-1">{item}</li>
+                                            <li key={index} className="">{item}</li>
                                           ))}
                                         </ol>
-                                      </div>
-                                     </div>
+                                      </div></div>
                                     )
                                   }
 
                                   {
                                        event.rules.rounds && (
-                                     <div>
-                                         {/* <div  className='text-lg font-bold text-white'>Finals:</div> */}
-                                      <div className='text-sm font-semibold leading-7 xl:text-xl 2xl:text-xl md:text-lg lg:text-lg sm:text-base 2xl:leading-10 xl:leading-10 lg:leading-9 md:leading-8'>
-                                       <ol>
+                                   <div className="m-2">     
+                                      {/* <div className='text-lg text-yellow-500 uppercase font-base'>Finals:</div> */}
+                                      <div className='ml-8 text-sm font-semibold leading-7 xl:text-xl 2xl:text-xl md:text-lg lg:text-lg sm:text-base 2xl:leading-10 xl:leading-10 lg:leading-9 md:leading-8'>
+                                       <ol className='m-2 list-disc'>
                                           {event?.rules.rounds.map((item, index) => (
-                                            <li key={index} className="pl-5 p-y-1">{item}</li>
+                                            <li key={index} className="">{item}</li>
                                           ))}
                                         </ol>
-                                      </div>
-                                     </div>
+                                      </div></div>
                                     )
                                   }
                               </div>

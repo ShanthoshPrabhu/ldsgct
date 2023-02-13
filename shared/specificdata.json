@@ -36,7 +36,7 @@
 "location":"GCT",
 "date":"25/02/2023",
 "eventName": "Shipwreck",
-"description": "Shipwreck is a contest of survival where the one’s presence of mind and sense of humour comes to the fore to save their life from an impending danger. Each contestant is assigned a character, either fictional or non-fictional (eg: Kalpana Chawla, James Bond), who is to be emulated as a crewmate in a sinking ship and they have to convince the captain to get the only extra life jacket to save themselves.",
+"description": "Shipwreck is a contest of survival where one’s presence of mind and sense of humour comes to the fore to save their life from an impending danger. Each contestant is assigned a character, either fictional or non-fictional (eg: Kalpana Chawla, James Bond), who is to be emulated as a crewmate in a sinking ship and they have to convince the captain to get the only extra life jacket to save themselves.",
 "guidelines":[["Individual participation."],["It consists of 2 rounds."],[" Prelims will be in Block & Tackle format."],["Finals will be Shipwreck"]],
 "rules": {
 "prelims": [
@@ -58,8 +58,8 @@
 "runner_up": 500
 },
 "contact": {
-"name": "Yassir",
-"Phone": 6379175572
+"name": "Jennifer Cyril",
+"Phone": 9311176181
 }
 },
 {
@@ -84,8 +84,8 @@
 "winner": 1000
 },
 "contact": {
-"name": "Meharun Halidha",
-"Phone": 9786966811
+"name": "Chrisstephen",
+"Phone": 9080668041
 }
 },
 {
@@ -111,8 +111,8 @@
 "winner": 500
 },
 "contact": {
-"name": "Chrisstephen",
-"Phone": 9080668041
+"name": "Meharun Halidha",
+"Phone": 9786966811
 }
 },
 {
@@ -152,13 +152,13 @@
 "location":"GCT",
 "date":"25/02/2023",
 "eventName": "Dumb Charades",
-"description": "Dumb Charades is a team-based competition where participants take turns guessing movies, words, or phrases by acting out clues. Put your miming skills to the test and have fun with your partner!",
+"description": "Gear up as a team of 2 and take guesses at movies, words or phrases. Express your thoughts through actions and make your partner guess what you are trying to convey. Buckle up, contestants! Mime away throughout this fun filled ride.",
 "guidelines":[["Individual participation."],["It consists of 2 rounds."]],
 "rules": {
 "prelims": [
+["Questions will be covering movies, day-to-day life objects and prov-erbs/idioms."],
+[" Splitting words, usage of codes and references are restricted."],
 ["Participants are not allowed to enact the exact word of the movie. They should enact the plot of that movie."],
-["Splitting words, usage of codes and references are restricted."],
-["Questions will be covering movies, day-to-day life objects and proverbs/idioms."],
 ["Further rules will be explained at the venue."],
 ["Shortlisted participants will advance to the finals."]
 ],
@@ -182,7 +182,7 @@
 "location":"GCT",
 "date":"25/02/2023",
 "eventName": "Puzzle & Crossword",
-"description": "Puzzle & Crossword is a competition for those who love puzzles, riddles, and wordplays. Show off your problem-solving skills and tackle as many puzzles as you can in the given time!",
+"description": "If your neurons are up for puzzles, riddles and wordplays, you're in luck! Because this could very well be your new playground. Solve as many puz-zles as you can and make your way through crosswords while you paint the scene gold with your mastery.",
 "guidelines":[["Maximum 2 per team"],["It consists of 2 rounds."]],
 "rules": {
 "rounds": [
@@ -206,7 +206,7 @@
 "location":"GCT",
 "date":"25/02/2023",
 "eventName": "Pot Pourri",
-"description": "Pot Pourri is a mixture of events that test the versatility and aptitude to improvise its contestants. Put your all-round skills to the finest of tests!",
+"description": "Pot Pourri is a mixture of events that promise an ecstatic collaboration of literature and fun. This contest will test the versatility and aptitude to improvise of its contestants and of course, the all rounders in you will be put to the finest of tests.",
 "guidelines":[["Two participants per team"],["It consists of 2 rounds."]],
 "rules": {
 "prelims": [
@@ -242,6 +242,9 @@
 ["Usage of mobile phones during the event will lead to disqualification."],
 ["Prelims will strictly take place during the allotted time."],
 ["The top 6 teams will be selected for finals."]
+],
+"finals":[
+    ["The rules for finals will be announced on the spot."]
 ]
 },
 "prizes": {
