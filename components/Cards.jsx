@@ -23,7 +23,7 @@ const Cards = () => {
     return(
        <div onClick={() => handleClick(item.link)} key={item.id}>
           <a>
-            <div className=  'w-64 p-4 ml-20 overflow-hidden bg-white rounded-md shadow-md lg:ml-20 md:w-80 cursor-pointer'>
+            <div className=  'w-64 p-4 overflow-hidden bg-white rounded-md shadow-md cursor-pointer md:w-80'>
               <img className='object-cover w-48 ml-4 md:w-32 lg:w-64 'src={item.src} alt="Event Image" />
               <div className='m-4'>
                 <span className='font-bold tracking-wider text-white'>{item.eventName}</span>

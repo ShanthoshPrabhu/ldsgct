@@ -9,7 +9,7 @@ const Navbar = () => {
      router.push("/event/Events")
   }
   let Links = [
-    { name: 'Home', link: '/' },
+    { name: 'Home', link:'/'},
     { name: 'Events', link: '/event/Events' },
     { name: 'Register', link: '/register' },
   ];
