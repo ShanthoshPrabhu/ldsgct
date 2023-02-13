@@ -4,20 +4,19 @@ import Button from '../shared/Button';
 import { useRouter } from 'next/router';
 
 const Navbar = () => {
-    const router = useRouter();
-  const handleBrain = ()=>{
-     router.push("/event/Events")
-  }
   let Links = [
     { name: 'Home', link:'/'},
     { name: 'Events', link: '/event/Events' },
-    { name: 'Register', link: '/register' },
+    // { name: 'Register', link: '/register' },
   ];
   let [open, setOpen] = useState(false);
-
+  const router = useRouter();
+  const handleClickRegister = ()=>{
+    router.push("/register")
+  }
   return (
     <div className='fixed top-0 left-0 z-50 w-full shadow-md'>
-      <div className='items-center justify-between py-4 bg-gray-800 md:flex md:px-10 px-7' onClick={handleBrain}>
+      <div className='items-center justify-between py-4 bg-gray-800 md:flex md:px-10 px-7'>
         <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
       text-white '>
           <span className='pt-2 mr-1 text-3xl font-light text-white'>
@@ -50,11 +49,12 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          {/* <button
-             className="p-3 text-center bg-red-300 border-2 rounded-md"
-             onClick={handleChange}>
-              Get Started
-          </button> */}
+          <button
+             className="md:ml-8 p-2 text-center bg-white hover:bg-yellow-500  rounded-sm"
+             onClick={handleClickRegister}
+           >
+              Register
+          </button>
         </ul>
       </div>
     </div>

@@ -6,7 +6,7 @@ import Navbar from '../../shared/Navbar';
 const Events = () => {
    
   return (
-    <div className="bg-gradient-to-l from-[#FF9500] via-[#FFC300] to-[#FFEA00] justify-center items-center flex">
+    <div className="bg-white justify-center items-center flex">
      <div className=''>
       <Navbar/>
      </div>
