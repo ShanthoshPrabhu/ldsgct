@@ -30,7 +30,9 @@ export default function Home() {
           <p className="">The beating heart of Brainstrain throbs with fervor to provide every student that graces its halls with the ultimate opportunity to showcase their eloquence and improvisation skills as it strives to be the birth of a whole new realm of literature and speech.</p>
           <p className="">And that's not all! This 2023, Brain strain promises to be an even more of a spectacular venue with an extravagant and sizzling lineup of events that are sure to set the arena ablaze. From debating your way out of a sinking ship and bringing your words to life, gear up as you traverse through various events and display your flair to captivate the eager spectators.</p>
       </div>
-         <div>Hello 2</div>
+         <div>
+          <img src="" alt="Go to Brainstrain"/>
+         </div>
       </div>
       <Footer/>
       </main>
