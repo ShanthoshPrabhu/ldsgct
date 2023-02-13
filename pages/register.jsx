@@ -112,7 +112,7 @@ const SignReg = () => {
        </div>
     </div>
    </div>
-   <Footer/>
+   {/* <Footer/> */}
    </>
   )
 }
