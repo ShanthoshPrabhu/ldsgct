@@ -17,6 +17,10 @@ const EventPage = () => {
      router.push("/register")
    }
   
+  const handleReturn = () => {
+    router.push("/event/Events")
+  }
+
   console.log("specificEvent", data )
   const { id } = router.query;
   console.log(id);
@@ -33,50 +37,53 @@ const EventPage = () => {
 return (    
      <>
        <div>
-            <div className="w-full justify-center flex items-center bg-white mt-8" > 
+            <div className="flex items-center justify-center w-full mt-8 bg-white" > 
              <div className="">
                <div><Navbar/></div>
-               <div className='mt-20 sm:mt-30 mb-40'> 
+               
+              
+               <div className='mt-10 mb-40'> 
         {/*Event Details */}
                     <div className=''>
                       <div>
                         {/*Event Heading */}
                         <div className=''>
-                        <h1 className='text-4xl text-center md:text-6xl font-light' >{event?.eventName} </h1>
+                        <img src="/return.png" alt="return" className="mx-4 cursor-pointer md:mx-16 lg:mx-36" onClick={handleReturn}></img>
+                        <h1 className='text-4xl font-light text-center md:text-6xl' >{event?.eventName} </h1>
                         </div>
                        <div className="">
-                         <div className='flex-row justify-center max-w-3xl gap-4 p-4 mt-10 bg-gray-800 shadow-lg shadow-yellow-700  rounded-lg  md:flex mx-20 md:mx-auto'> 
-                        <div className="text-yellow-500 flex p-2 md:mr-3"> 
+                         <div className='flex-row justify-center max-w-2xl gap-4 p-4 mx-20 mt-10 bg-gray-800 rounded-lg shadow-lg shadow-yellow-700 md:flex md:mx-auto'> 
+                        <div className="flex p-2 text-yellow-500 md:mr-3"> 
                           <div><LocationOnIcon/></div>
                             <div>
                             <div className='font-semibold'>Location</div>  
                             <div className='font-base'>{event.location}</div>
                           </div>
                         </div>
-                        <div className="text-yellow-500 flex p-2" > 
+                        <div className="flex p-2 text-yellow-500" > 
                           <div><EmojiEventsOutlinedIcon/></div>
                             <div>
                             <div className='font-semibold'>Prize</div>  
                             <div className='font-base'>₹{event?.price}</div>
                           </div>
                         </div>
-                        <div className="text-yellow-500 flex p-2"> 
+                        <div className="flex p-2 text-yellow-500"> 
                           <div><LocalPhoneOutlinedIcon/></div>
                             <div>
                             <div className='font-semibold'>Phone</div>  
                             <div className='font-base'>{event.contact.Phone}</div>
                           </div>
                         </div>
-                        <div className="text-yellow-500 flex p-2 "> 
+                        <div className="flex p-2 text-yellow-500 "> 
                           <div><CalendarTodayOutlinedIcon/></div>
                             <div>
                             <div className='font-semibold'>Date</div>  
                             <div className='font-base'>{event.date}</div>
                           </div>
                         </div>
-                        <div className='w-28 p-2 md:w-24 md:h-10 md:ml-12 text-center text-black bg-white hover:bg-yellow-500 rounded-md cursor-pointer mt-5 md:mt-2 md:ml-16' onClick={handleClickReg}>
+                        {/* <div className='p-2 mt-5 text-center text-black bg-white rounded-md cursor-pointer w-28 md:w-24 md:h-10 hover:bg-yellow-500 md:mt-2 md:ml-16' onClick={handleClickReg}>
                           Register
-                        </div>
+                        </div> */}
                     </div>
                         {/*Event Content */}
                       <div>

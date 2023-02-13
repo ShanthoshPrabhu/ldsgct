@@ -6,11 +6,11 @@ import Navbar from '../../shared/Navbar';
 const Events = () => {
    
   return (
-    <div className="bg-white justify-center items-center flex">
+    <div className="flex items-center justify-center bg-white">
      <div className=''>
       <Navbar/>
      </div>
-    <div className='mt-20 mb-20'>
+     <div className='mt-20 mb-20'>
       <Cards/> 
      </div>
       <Footer/>
