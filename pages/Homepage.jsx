@@ -1,19 +1,16 @@
-import React from 'react';
-import Navbar from '../shared/Navbar';
+import React from 'react'
+import Footer from '../shared/Footer'
+import Navbar from '../shared/Navbar'
 
-const Homepage = () => {
-  
+const brainstrain = () => {
   return (
+    <div>
       <>
-    <div className='pt-20 text-black'>
-      <Navbar />
-      Welcome Home!
+      
+      <Footer/>
+      </>
     </div>
-   < div>     
-   <button>Submit</button>
-   </div>
-     </>
   )
 }
 
-export default Homepage
+export default brainstrain

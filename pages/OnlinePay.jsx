@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import Navbar from '../shared/Navbar'
+import Footer from '../shared/Footer';
 
 const Payment = () => {
   const [showToast, setShowToast] = useState(false);
@@ -59,6 +60,7 @@ const Payment = () => {
        </div>
       </div>
      </div>
+     <Footer/>
     </>
 
   )
