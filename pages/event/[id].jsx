@@ -32,7 +32,7 @@ return (
                <div><Navbar/></div>
          
                
-               <div className='mt-20 sm:mt-30'> 
+               <div className='mt-28 sm:mt-30'> 
         {/*Event Details */}
                     <div className=''>
                       <div>
