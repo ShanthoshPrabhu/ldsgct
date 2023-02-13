@@ -13,8 +13,8 @@ import Footer from '../../shared/Footer';
 
 const EventPage = () => {
     const router = useRouter()
-   const handleClick = () => {
-     router.push("/temporaryreg")
+   const handleClickReg = () => {
+     router.push("/register")
    }
   
   console.log("specificEvent", data )
@@ -36,7 +36,7 @@ return (
             <div className="w-full justify-center flex items-center bg-white mt-8" > 
              <div className="">
                <div><Navbar/></div>
-               <div className='mt-20 sm:mt-30'> 
+               <div className='mt-20 sm:mt-30 mb-40'> 
         {/*Event Details */}
                     <div className=''>
                       <div>
@@ -74,7 +74,7 @@ return (
                             <div className='font-base'>{event.date}</div>
                           </div>
                         </div>
-                        <div className='w-28 p-2 md:w-24 md:h-10  text-center text-black bg-white hover:bg-yellow-500 rounded-sm cursor-pointer mt-5 md:mt-2 md:ml-16' onClick={handleClick}>
+                        <div className='w-28 p-2 md:w-24 md:h-10 md:ml-12 text-center text-black bg-white hover:bg-yellow-500 rounded-md cursor-pointer mt-5 md:mt-2 md:ml-16' onClick={handleClickReg}>
                           Register
                         </div>
                     </div>

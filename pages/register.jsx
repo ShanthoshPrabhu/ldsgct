@@ -4,7 +4,7 @@ import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import Navbar from '../shared/Navbar';
 import {addDoc,collection,doc,serverTimestamp,updateDoc} from "@firebase/firestore";
 import { db } from '../firebase';
-
+import Footer from "../shared/Footer.jsx"
 const SignReg = () => {
   const router = useRouter();
   const [name,setname]=useState('');
@@ -44,24 +44,24 @@ const SignReg = () => {
     <>
    <div>
       <div><Navbar/></div>
-      <div className="flex justify-center min-h-screen align-center bg-gradient-to-r from-[#FF9500] via-[#FFC300] to-[#FFEA00] mt-16 rounded-lg mb-16" >
+      <div className="flex justify-center min-h-screen align-center bg-white mt-16 rounded-lg mb-16" >
        <div className='grid justify-center grid-flow-row px-20 py-10 my-8 space-y-8 align-middle bg-white border-2 rounded-lg shadow-lg md:px-36 '>
-         <div className='grid justify-center text-2xl font-bold'>
+         <div className='grid justify-center text-2xl font-normal'>
            Register
          </div>
          <div className=''>
-          <label className='font-bold'>
-            Username
+          <label className='font-medium text-yellow-500'>
+            Name
           </label>
            <div className='flex flex-row border-b border-slate-400' >
             <div className='mt-1.5 pr-2'>
              <ion-icon name="person-outline"></ion-icon>
             </div>
-             <input type="text" className="outline-none " value={name} onChange={e=>setname(e.target.value)}  placeholder="Type Your Username" />
+             <input type="text" className="outline-none " value={name} onChange={e=>setname(e.target.value)}  placeholder="Type Your Name" />
             </div>
          </div>
          <div className=''>
-          <label className='font-bold'>
+          <label className='font-medium text-yellow-500'>
             Email-Id
           </label>
            <div className='flex flex-row border-b border-slate-400' >
@@ -72,7 +72,7 @@ const SignReg = () => {
             </div>
          </div>
          <div className=''>
-          <label className='font-bold'>
+          <label className='font-medium text-yellow-500'>
             College Name
           </label>
            <div className='flex flex-row border-b border-slate-400' >
@@ -83,7 +83,7 @@ const SignReg = () => {
             </div>
          </div>
          <div className=''>
-          <label className='font-bold'>
+          <label className='font-medium text-yellow-500'>
             Year of Graduation
           </label>
            <div className='flex flex-row border-b border-slate-400' >
@@ -94,7 +94,7 @@ const SignReg = () => {
             </div>
          </div>
          <div className=''>
-          <label className='font-bold'>
+          <label className='font-medium text-yellow-500'>
             Phone Number
           </label>
            <div className='flex flex-row border-b border-slate-400' >
@@ -104,15 +104,14 @@ const SignReg = () => {
              <input type="text" className="outline-none" value={phNumber} onChange={e=>setPhNumber(e.target.value)} placeholder="Type Your Phone Number" />
             </div>
          </div>
-         
          <div className='grid justify-center'>
-            <button className='p-3 text-center text-white duration-500 bg-red-600 border-2 rounded-md hover:bg-yellow-500'  onClick={registerDetails}>Proceed to Pay</button>
+            <button className='p-3 text-center text-white duration-500 bg-gray-800 border-2 rounded-md hover:bg-yellow-500'  onClick={registerDetails}>Proceed to Pay</button>
           </div>
           {error ? (<div className=' text-red-600 text-base'>{error}</div>):null}
        </div>
     </div>
    </div>
-   {/* <Footer/> */}
+   <Footer/>
    </>
   )
 }

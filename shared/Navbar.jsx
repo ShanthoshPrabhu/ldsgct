@@ -12,7 +12,7 @@ const Navbar = () => {
   let [open, setOpen] = useState(false);
   const router = useRouter();
   const handleClickRegister = ()=>{
-    router.push("/temporaryreg")
+    router.push("/register")
   }
   return (
     <div className='fixed top-0 left-0 z-50 w-full shadow-md'>

@@ -13,18 +13,18 @@ const Payment = () => {
       setShowToast(false);
     }, 5000);
   };
-  const handleClick = ()=>{
-    router.push("/")
+  const handleClickOnline = ()=>{
+    router.push("/onlinePay")
   }
    const handleClickOnspot = ()=>{
-    router.push("/onlinePay")
+    router.push("/verificationOnspot")
   }
   return (
     <> 
     <Navbar/>
-    <div className='flex items-center justify-center min-h-screen bg-gradient-to-r from-[#FF9500] via-[#FFC300] to-[#FFEA00] '>  
+    <div className='flex items-center justify-center min-h-screen bg-white '>  
          <div className='container' >
-          <div className='flex items-center justify-center h-16 mt-20 text-3xl font-light text-white md:text-5xl md:font-base'>
+          <div className='flex items-center justify-center h-16 mt-20 text-3xl font-normal text-black md:text-5xl md:font-base'>
               Payment
         </div>
           <div class=" text-center pt-4 lg:px-4 rounded-lg w-lg">
@@ -37,15 +37,17 @@ const Payment = () => {
         <div 
         className='grid justify-center grid-flow-row mt-10 cursor-pointer md:grid-flow-col gap-y-24 md:gap-x-24 md:mt-14'
         >
-        <div className='flex flex-col items-center justify-center h-48 mx-12 bg-gray-100 border rounded-lg shadow-2xl sm:h-56 w-72 sm:w-96 '>
-          <div className='text-lg font-bold text-center ' >Pay through Online mode</div>
-                 <button  className='p-2 mt-2 text-xs font-semibold text-center text-white bg-red-500 rounded-lg '>Pay ₹150  </button>
+        <div className='flex flex-col items-center justify-center h-48 mx-12 bg-gray-800 border rounded-lg shadow-md shadow-yellow-700  sm:h-56 w-72 sm:w-96 '>
+          <div className='text-lg font-thin text-center text-yellow-500 ' >Pay through Online mode</div>
+                 <button  
+                 className='p-2 mt-2 text-xs font-semibold text-center text-black bg-yellow-500 hover:bg-white  rounded-lg '
+                 onClick={handleClickOnline}>Pay ₹150  </button>
           </div>
-          <div className='flex flex-col items-center justify-center h-48 p-4 mx-12 bg-gray-100 border rounded-lg shadow-2xl sm:h-56 w-72 sm:w-96 '
+          <div className='flex flex-col items-center justify-center h-48 p-4 mx-12 bg-gray-800 border rounded-lg shadow-md shadow-yellow-700  sm:h-56 w-72 sm:w-96 '
           >
           {/* <img src="/onspot.jpeg" alt="onspot" className="absolute w-20 overflow-hidden opacity-25"/> */}
-          <div className='relative font-bold text-center'>ON-SPOT Registration</div>
-          <button onClick={handleClickSpot} className='p-2 mt-2 text-xs font-semibold text-center text-white bg-red-500 rounded-lg '>Pay ₹210  </button>
+          <div className='relative font-light text-center text-lg text-yellow-500'>On the Spot Registration</div>
+          <button onClick={handleClickOnspot} className='p-2 mt-2 text-xs font-semibold text-center text-black bg-yellow-500 hover:bg-white rounded-lg '>Pay ₹210  </button>
            {showToast && (
             <div class="fixed bottom-0 mb-16 mr-4 p-4 bg-gray-800 rounded-lg text-white shadow-lg">
               <p>Thanks for Registering, we will contact you soon.</p>
