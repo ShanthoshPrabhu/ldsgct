@@ -14,14 +14,14 @@ const Events = () => {
      <div className=''>
       <Navbar/>
      </div>
-     <div className='mt-28 mx-10 justify-center items-center border bg-yellow-500  text-md font-normal text-gray-800 p-4 rounded-md'>
+     <div className='items-center justify-center p-4 mx-10 font-normal text-gray-800 bg-yellow-500 border rounded-md mt-28 text-md'>
       All the below events can be participated by just paying the General Event Fee using the above "Register" button. Click on the below events to know individual event details.
      </div>
-     <div className='text-4xl mt-8 font-light'>
+     <div className='mt-8 text-4xl font-light'>
       Events
      </div>
      <div 
-         className='flex justify-center items-center mt-10 w-40 p-3 text-center text-white duration-500 bg-gray-800 rounded-md  hover:bg-yellow-500 md:w-48 cursor'
+         className='flex items-center justify-center w-40 p-3 mt-10 text-center text-white duration-500 bg-gray-800 rounded-md hover:bg-yellow-500 md:w-48 cursor'
          onClick={handleRegister}>
             <button>Register</button>
       </div>
