@@ -77,7 +77,7 @@ const SignReg = () => {
          
          <div className='grid justify-center'>
             <button className='p-3 text-center text-white duration-500 bg-red-600 border-2 rounded-md hover:bg-yellow-500' onClick={handleSubmit}>Proceed to Pay</button>
-            </div>
+          </div>
        </div>
     </div>
    </div>
