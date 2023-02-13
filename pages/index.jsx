@@ -1,10 +1,16 @@
 import { useSession } from "next-auth/react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import Footer from "../shared/Footer";
 import Navbar from "../shared/Navbar";
 
 export default function Home() {
+  const router = useRouter();
+  const handleClickPic = () => {
+     router.push("/event/Events")
+  }
   return (
+
     <div>
       <Head>
         <title>Literary and Debating Society</title>
@@ -20,9 +26,9 @@ export default function Home() {
       ></script>
       </Head>
 
-      <main className="bg-black">
+      <main>
        <Navbar/>
-      <div className='grid grid-cols-3 mt-20 text-white'>
+      <div className='grid mt-20 md:grid-cols-3 '>
          <div className="px-10 col-span-2 text-lg font-light leading-loose flex-col justify-center items-center">
           <p className="">One of Coimbatore's largest events dedicated solely to celebrating the love of the English Language and its rich literature is back and ready to be the literary festival that will leave you in awe.</p>
           <p className="">Over the years, Brainstrain has established itself as a grand arena where more than 200 literary intellectuals from across Coimbatore and other parts of the state come together. This event has its grand vision set fast on bringing together students from different disciplines and all walks of life to foster the spirit of friendly competition among peers while having fun in the various exciting events that they will be participating in.</p>
@@ -30,7 +36,9 @@ export default function Home() {
           <p className="">The beating heart of Brainstrain throbs with fervor to provide every student that graces its halls with the ultimate opportunity to showcase their eloquence and improvisation skills as it strives to be the birth of a whole new realm of literature and speech.</p>
           <p className="">And that's not all! This 2023, Brain strain promises to be an even more of a spectacular venue with an extravagant and sizzling lineup of events that are sure to set the arena ablaze. From debating your way out of a sinking ship and bringing your words to life, gear up as you traverse through various events and display your flair to captivate the eager spectators.</p>
       </div>
-         <div>Hello 2</div>
+         <div>
+          <img src="https://www.linkpicture.com/q/coming-soon5.jpg" alt="Go to Brainstrain" className="flex justify-center items-center max-h-96 mt-16 ml-16 mb-20 cursor-pointer" onClick={handleClickPic} />
+         </div>
       </div>
       <Footer/>
       </main>

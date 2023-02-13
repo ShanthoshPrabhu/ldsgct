@@ -17,7 +17,7 @@ const Payment = () => {
     router.push("/")
   }
    const handleClickOnspot = ()=>{
-    router.push("/OnlinePay")
+    router.push("/onlinePay")
   }
   return (
     <> 
