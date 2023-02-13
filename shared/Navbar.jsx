@@ -9,24 +9,24 @@ const Navbar = () => {
      router.push("/event/Events")
   }
   let Links = [
-    { name: 'Home', link: '/' },
+    { name: 'Home', link:'/'},
     { name: 'Events', link: '/event/Events' },
     { name: 'Register', link: '/register' },
   ];
   let [open, setOpen] = useState(false);
 
   return (
-    <div className='shadow-md w-full fixed top-0 left-0 z-50'>
-      <div className='md:flex items-center justify-between bg-gray-800 py-4 md:px-10 px-7' onClick={handleBrain}>
+    <div className='fixed top-0 left-0 z-50 w-full shadow-md'>
+      <div className='items-center justify-between py-4 bg-gray-800 md:flex md:px-10 px-7' onClick={handleBrain}>
         <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
       text-white '>
-          <span className='text-3xl text-white font-light mr-1 pt-2'>
+          <span className='pt-2 mr-1 text-3xl font-light text-white'>
             <img className='h-9 w-9' src="https://www.linkpicture.com/q/IMG-20230213-WA0016.jpg" alt="" />
           </span>
-          <p className='ml-2 font-thin text-2xl text-yellow-500'>B</p>
-          <p className='font-thin text-2xl '>rain</p>
-          <p className='font-thin text-2xl text-yellow-500'>S</p>
-          <p className='font-thin text-2xl '>train</p>
+          <p className='ml-2 text-2xl font-thin text-yellow-500'>B</p>
+          <p className='text-2xl font-thin '>rain</p>
+          <p className='text-2xl font-thin text-yellow-500'>S</p>
+          <p className='text-2xl font-thin '>train</p>
         </div>
 
         <div
@@ -42,16 +42,16 @@ const Navbar = () => {
           }`}
         >
           {Links.map((link) => (
-            <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7'>
+            <li key={link.name} className='text-xl md:ml-8 md:my-0 my-7'>
               <Link href={link.link} as={link.link} legacyBehavior>
-                <a className='text-white font-light hover:text-yellow-500 duration-500 '>
+                <a className='font-light text-white duration-500 hover:text-yellow-500 '>
                   {link.name}
                 </a>
               </Link>
             </li>
           ))}
           {/* <button
-             className="border-2  p-3 text-center bg-red-300 rounded-md"
+             className="p-3 text-center bg-red-300 border-2 rounded-md"
              onClick={handleChange}>
               Get Started
           </button> */}

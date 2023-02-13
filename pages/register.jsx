@@ -8,7 +8,7 @@ import Footer from '../shared/Footer';
 const SignReg = () => {
   const router = useRouter();
   const handleSubmit = () => {
-   router.push("/payment")
+   router.push("/Payment")
   }
   return (
     <>

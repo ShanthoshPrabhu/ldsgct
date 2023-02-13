@@ -51,12 +51,15 @@ const Payment = () => {
          >Submit</button>
          </form>
          {showToast && (
-          <div className="fixed bottom-20 mb-4 mr-4 p-4 bg-gray-800 rounded-lg text-white shadow-lg">
+          <div className="fixed p-4 mb-4 mr-4 text-white bg-gray-800 rounded-lg shadow-lg bottom-20">
             <p>Thanks for Registering, we will contact you after verifying.</p>
           </div>
            )}
         </div>
-        <div  className='flex flex-col items-center justify-center h-48 p-10 mx-12 bg-gray-100 border rounded-lg shadow-2xl sm:h-56 w-72 sm:w-96'>HI</div>
+        <div  className='flex flex-col items-center justify-center p-10 mx-12 bg-gray-100 border rounded-lg shadow-2xl w-[280px] md:w-[300px] h-120'>
+          <img src="/verify.jpeg" alt="verfication" height="100" width="200"/>
+          <p className="mt-2 text-xl font-semibold text-center ">Upload your payment screenshot for verification</p>
+        </div>
         </div>
        </div>
        <div className='flex justify-center mt-10 md:mt-20'>
