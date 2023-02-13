@@ -8,7 +8,7 @@ import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
 import Button from "../../shared/Button"
 import data from "../../shared/specificdata.json"
 import Image from 'next/image';
-import Navbar from '../../shared/Navbar'
+
 import { useEffect } from 'react';
 import Cookies from 'js-cookie';
 import { useState } from 'react';

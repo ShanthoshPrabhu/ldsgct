@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 const CardImage = (props) => {
 const isImageURL = props.image;
@@ -6,10 +7,12 @@ console.log("props",props)
 if (isImageURL) {
 return (
 <div className="h-64 overflow-hidden sm:h-full">
-<img
+<Image
   className={`${ props.effect ? "transform-black-and-white" : "" } w-full h-full object-cover`}
   src={props.image}
   alt="Seattle"
+  width="100"
+  height="100"
 />
 </div>
 );

@@ -10,7 +10,7 @@ const Homepage = () => {
       Welcome Home!
     </div>
    < div>     
-   <Button>Submit</Button>
+   <button>Submit</button>
    </div>
      </>
   )
