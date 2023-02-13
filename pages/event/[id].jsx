@@ -8,6 +8,7 @@ import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
 import Button from "../../shared/Button"
 import data from "../../shared/specificdata.json"
 import Image from 'next/image';
+import Footer from '../../shared/Footer';
 
 
 const EventPage = () => {
@@ -30,8 +31,9 @@ const EventPage = () => {
     )
  }
 return (    
+     <>
        <div>
-            <div className="w-full justify-center flex items-center bg-gradient-to-r from-[#FF9500] via-[#FFC300] to-[#FFEA00]" > 
+            <div className="w-full justify-center flex items-center bg-white mt-8" > 
              <div className="">
                <div><Navbar/></div>
                <div className='mt-28 sm:mt-30'> 
@@ -40,41 +42,39 @@ return (
                       <div>
                         {/*Event Heading */}
                         <div className=''>
-                        <h1 className='text-4xl text-center text-white md:text-6xl md:font-light' >{event?.eventName} </h1>
+                        <h1 className='text-4xl text-center md:text-6xl font-light' >{event?.eventName} </h1>
                         </div>
-
-                              
                        <div className="">
-                         <div className='flex-row justify-center max-w-3xl gap-4 p-4 mx-auto mt-10 text-black bg-yellow-100 rounded-md sm:max-w-xl md:flex'> 
-                        <div className='flex'>
-                          <div> <LocationOnIcon/></div> 
-                          <div>
-                            <div className='font-semibold'> Location </div>  
-                            <div className='font-base'>{event?.location}</div>
+                         <div className='flex-row justify-center max-w-3xl gap-4 p-4 mt-10 bg-gray-800 shadow-lg shadow-yellow-700  rounded-lg  md:flex mx-20 md:mx-auto'> 
+                        <div className="text-yellow-500 flex p-2 md:mr-3"> 
+                          <div><LocationOnIcon/></div>
+                            <div>
+                            <div className='font-semibold'>Location</div>  
+                            <div className='font-base'>{event.location}</div>
                           </div>
                         </div>
-                        <div className='flex'> 
+                        <div className="text-yellow-500 flex p-2" > 
                           <div><EmojiEventsOutlinedIcon/></div>
                             <div>
                             <div className='font-semibold'>Prize</div>  
                             <div className='font-base'>₹{event?.price}</div>
                           </div>
                         </div>
-                        <div className='flex'> 
-                          <div><LocalPhoneOutlinedIcon style={{height:"24px", width:"20px"}}/></div>
+                        <div className="text-yellow-500 flex p-2"> 
+                          <div><LocalPhoneOutlinedIcon/></div>
                             <div>
                             <div className='font-semibold'>Phone</div>  
                             <div className='font-base'>{event.contact.Phone}</div>
                           </div>
                         </div>
-                        <div className='flex'> 
-                          <div><CalendarTodayOutlinedIcon style={{height:"24px", width:"20px"}}/></div>
+                        <div className="text-yellow-500 flex p-2 "> 
+                          <div><CalendarTodayOutlinedIcon/></div>
                             <div>
                             <div className='font-semibold'>Date</div>  
                             <div className='font-base'>{event.date}</div>
                           </div>
                         </div>
-                        <div className='w-32 p-4 text-center text-white bg-red-500 rounded-md cursor-pointer' onClick={handleClick}>
+                        <div className='w-28 p-2 md:w-24 md:h-10  text-center text-black bg-white hover:bg-yellow-500 rounded-sm cursor-pointer mt-5 md:mt-2 md:ml-16' onClick={handleClick}>
                           Register
                         </div>
                     </div>
@@ -84,12 +84,12 @@ return (
                           <div className="m-10 2xl:m-20 xl:m-20 ">
                             {/*Event Description */}
                                 <div className='text-black '>
-                                                <div className='mb-5 text-lg font-bold text-white xl:text-3xl 2xl:text-3xl lg:2xl md:2xl sm:lg'>Event Description:</div>
+                                                <div className='mb-5 text-lg font-bold xl:text-3xl 2xl:text-3xl lg:2xl md:2xl sm:lg'>Event Description:</div>
                                                 <div className='text-sm font-semibold leading-7 xl:text-xl 2xl:text-xl md:text-lg lg:text-lg sm:text-base 2xl:leading-10 xl:leading-10 lg:leading-9 md:leading-8'>{event?.description}</div>
                                 </div>
                             {/*Event Rules */}    
                                 <div className='text-black'>
-                                  <div className='my-5 text-2xl font-bold text-white xl:text-3xl 2xl:text-3xl lg:2xl md:2xl sm:lg'>
+                                  <div className='my-5 text-2xl font-bold xl:text-3xl 2xl:text-3xl lg:2xl md:2xl sm:lg'>
                                     Rules:
                                   </div>
                                
@@ -149,6 +149,8 @@ return (
               </div> 
             </div>
        </div>
+       <Footer/>
+       </>
 );
 }
 
