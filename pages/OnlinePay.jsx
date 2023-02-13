@@ -43,7 +43,7 @@ async function uploadData(){
           });
         });
      console.log('success')
-     router.push('/')
+     router.push('/verificationOnline')
       }
 }
   return (

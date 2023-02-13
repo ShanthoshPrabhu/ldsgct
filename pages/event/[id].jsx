@@ -74,7 +74,7 @@ return (
                             <div className='font-base'>{event.date}</div>
                           </div>
                         </div>
-                        <div className='w-28 p-2 md:w-24 md:h-10 md:ml-12 text-center text-black bg-white hover:bg-yellow-500 rounded-md cursor-pointer mt-5 md:mt-2 md:ml-16' onClick={handleClickReg}>
+                        <div className='w-28 p-2 md:w-24 md:h-10  text-center text-black bg-white hover:bg-yellow-500 rounded-md cursor-pointer mt-5 md:mt-2 md:ml-16' onClick={handleClickReg}>
                           Register
                         </div>
                     </div>
