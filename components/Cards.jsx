@@ -12,6 +12,7 @@ const Cards = () => {
     router.push(`/event/${link}`);
   };
 
+
   
   return (
     <>

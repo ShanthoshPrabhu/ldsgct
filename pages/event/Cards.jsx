@@ -3,6 +3,7 @@ import data from "../../Components/EventData";
 
 const Cards = () => {
 
+
   return (
     <>
     <div className='grid gap-10 mt-8 lg:grid-cols-3'>
