@@ -44,10 +44,10 @@ export default function Home() {
           <img src="https://www.linkpicture.com/q/coming-soon5.jpg" alt="Go to Brainstrain" className="flex items-center justify-center mt-16 mb-20 ml-16 cursor-pointer max-h-96"  />
          </div>
          <div >
-          <button className="p-4 mb-12 font-bold text-white bg-red-600 rounded-md ml-28 w-44 bg-red" onClick={handleClickPic}>Go to Events</button>
+          <button className="p-4 mb-12 font-light text-white bg-gray-800 hover:bg-yellow-600 rounded-md ml-28 w-44 bg-red" onClick={handleClickPic}>Go to Events</button>
          </div>
          <div >
-          <button className="p-4 mb-12 font-bold text-white bg-red-600 rounded-md ml-28 w-44 bg-red" onClick={handleClickRule}>
+          <button className="p-4 mb-12 font-light text-white bg-gray-800 hover:bg-yellow-600 rounded-md ml-28 w-44 bg-red" onClick={handleClickRule}>
             Click for Rule Book
           </button>
          </div>
