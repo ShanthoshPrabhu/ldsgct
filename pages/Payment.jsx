@@ -39,7 +39,7 @@ const Payment = () => {
         </div>
        </div> 
        <div className='flex justify-center mt-10 md:mt-20'>
-        <div className='w-40 p-3 text-center text-white duration-500 bg-red-500 border-2 border-yellow-500 rounded-md bordere-2 hover:bg-blue-500 md:w-48' onCLick={handleClick}>
+        <div className='w-40 p-3 mb-20 text-center text-white duration-500 bg-red-500 border-2 border-yellow-500 rounded-md bordere-2 hover:bg-blue-500 md:w-48' onCLick={handleClick}>
           <button>Cancel</button>
         </div>
          {showToast && (
