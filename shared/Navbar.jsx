@@ -43,10 +43,11 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <button
-             className="border-2  p-3 text-center bg-red-300 rounded-md">
+          {/* <button
+             className="border-2  p-3 text-center bg-red-300 rounded-md"
+             onClick={handleChange}>
               Get Started
-          </button>
+          </button> */}
         </ul>
       </div>
     </div>
