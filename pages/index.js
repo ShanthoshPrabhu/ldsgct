@@ -1,18 +1,17 @@
-import { useSession } from 'next-auth/react'
-import Head from 'next/head'
-
+import { useSession } from "next-auth/react";
+import Head from "next/head";
 
 export default function Home() {
-  const { data: session ,status} = useSession();
+  const { data: session, status } = useSession();
   return (
-    <div >
+    <div>
       <Head>
         <title>Literary and Debating Society</title>
       </Head>
 
       <main>
-         <div>LDS</div>
+        <div>LDS</div>
       </main>
     </div>
-  )
+  );
 }
