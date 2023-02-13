@@ -13,6 +13,7 @@ export default function Home() {
   const handleEvent = () => {
      router.push("/event/Events")
   }
+  
   return (
 
     <div>
