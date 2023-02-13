@@ -5,9 +5,8 @@ import Button from '../shared/Button';
 const Navbar = () => {
   let Links = [
     { name: 'Home', link: '/' },
-    { name: 'BrainStrain', link: '/event/Events' },
-    { name: 'About', link: '/' },
-    { name: 'Contact', link: '/' },
+    { name: 'Events', link: '/event/Events' },
+    { name: 'Register', link: '/register' },
   ];
   let [open, setOpen] = useState(false);
 
