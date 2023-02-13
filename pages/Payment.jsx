@@ -39,7 +39,7 @@ const Payment = () => {
         >
         <div className='flex flex-col items-center justify-center h-48 mx-12 bg-gray-100 border rounded-lg shadow-2xl sm:h-56 w-72 sm:w-96 '>
           <div className='text-lg font-bold text-center ' >Pay through Online mode</div>
-                 <button onClick={handleClickOnline} className='p-2 mt-2 text-xs font-semibold text-center text-white bg-red-500 rounded-lg '>Pay ₹150  </button>
+                 <button  className='p-2 mt-2 text-xs font-semibold text-center text-white bg-red-500 rounded-lg '>Pay ₹150  </button>
           </div>
           <div className='flex flex-col items-center justify-center h-48 p-4 mx-12 bg-gray-100 border rounded-lg shadow-2xl sm:h-56 w-72 sm:w-96 '
           >
