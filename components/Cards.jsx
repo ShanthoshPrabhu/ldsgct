@@ -23,8 +23,8 @@ const Cards = () => {
     return(
        <div onClick={() => handleClick(item.link)} key={item.id}>
           <a>
-            <div className=  'w-64 p-4 ml-20 overflow-hidden bg-white rounded-md shadow-md lg:ml-20 md:w-80 cursor-pointer'>
-              <Image className='object-cover w-48 ml-4 md:w-32 lg:w-64 ' width="100" height="100" src={item.src} alt="Event Image" />
+            <div className=  'w-64 p-4 overflow-hidden bg-white rounded-md shadow-md shadow-yellow-600 cursor-pointer md:w-80 md:mx-24'>
+              <img className='object-cover w-48 ml-4 md:w-32 lg:w-64 'src={item.src} alt="Event Image" />
               <div className='m-4'>
                 <span className='font-bold tracking-wider text-white'>{item.eventName}</span>
                 <span className='block text-sm text-grey-500'>{item.Time}</span>

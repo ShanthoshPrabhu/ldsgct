@@ -41,9 +41,10 @@ const SignReg = () => {
   }
   
   return (
+    <>
    <div>
       <div><Navbar/></div>
-      <div className="flex justify-center min-h-screen align-center bg-gradient-to-r from-[#FF9500] via-[#FFC300] to-[#FFEA00] mt-16 rounded-lg" >
+      <div className="flex justify-center min-h-screen align-center bg-gradient-to-r from-[#FF9500] via-[#FFC300] to-[#FFEA00] mt-16 rounded-lg mb-16" >
        <div className='grid justify-center grid-flow-row px-20 py-10 my-8 space-y-8 align-middle bg-white border-2 rounded-lg shadow-lg md:px-36 '>
          <div className='grid justify-center text-2xl font-bold'>
            Register
@@ -111,6 +112,8 @@ const SignReg = () => {
        </div>
     </div>
    </div>
+   <Footer/>
+   </>
   )
 }
 

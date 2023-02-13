@@ -18,22 +18,26 @@ const Payment = () => {
     <Navbar/>
     <div className='flex items-center justify-center min-h-screen bg-gradient-to-r from-[#FF9500] via-[#FFC300] to-[#FFEA00] mt-16'>   
      <div className='container' >
-        <div className='flex items-center justify-center h-16 mt-10 text-3xl font-light md:text-5xl sm:font-light'>
+        <div className='flex items-center justify-center h-16 mt-10 text-3xl font-bold text-red-700 md:text-5xl sm:font-light'>
             Online Mode Payment
        </div>
       <div className='grid justify-around grid-flow-row md:grid-flow-col'>
       <div 
       className='grid justify-center grid-flow-row cursor-pointer md:grid-flow-row gap-y-24 md:gap-x-24 mt-14 md:mt-28 '>
-       <div className='flex flex-col items-center justify-center h-48 mx-12 bg-gray-100 border rounded-lg shadow-2xl sm:h-56 w-72 sm:w-96 '>
-         <div className='text-center ' >Scan the QR Code to pay</div>
+       <div className='flex flex-col items-center justify-center h-48 p-6 mx-12 bg-gray-100 border rounded-lg shadow-2xl sm:h-56 w-72 sm:w-96 '>
+        <img src="/qr.jpeg" alt="QR_Code" className="overflow-hidden"/>
+         <div className='font-bold text-center' >Scan the QR Code to pay</div>
         </div>
         <div className='flex flex-col items-center justify-center h-48 mx-12 bg-white border rounded-lg shadow-2xl sm:h-56 w-72 sm:w-96'>
-         <div className='text-center'>Pay through UPI Id</div>
+        <img src="/UPI-Color.png" alt="" width="150" height="150" className="mb-4"/>
+        <a href="harishhar2304@oksbi" className="mb-4 text-blue-500"> harishhar2304@oksbi </a>
+         <div className='font-bold text-center'>Click to pay through UPI Id</div>
         </div>
         <div className='flex flex-col items-center justify-center h-48 mx-12 bg-white border rounded-lg shadow-2xl sm:h-56 w-72 sm:w-96'>
+        <div className='mb-4 text-xl font-bold text-center text-blue-500'>9894578288</div>
          <div className='h-10 font-bold text-center'>Pay through Phone Number</div>
          <div className='h-10 font-light text-center'>You can pay the registration fee to this number</div>
-         <div className='text-xl font-bold text-center text-blue-500'>9894578288</div>
+         
         </div>
        </div> 
         <div className='grid justify-center grid-flow-row cursor-pointer md:grid-flow-row gap-y-24 md:gap-x-24 mt-14 md:mt-28'>
@@ -47,10 +51,14 @@ const Payment = () => {
          >Submit</button>
          </form>
          {showToast && (
-          <div class="fixed bottom-0 mb-4 mr-4 p-4 bg-gray-800 rounded-lg text-white shadow-lg">
+          <div className="fixed p-4 mb-4 mr-4 text-white bg-gray-800 rounded-lg shadow-lg bottom-20">
             <p>Thanks for Registering, we will contact you after verifying.</p>
           </div>
            )}
+        </div>
+        <div  className='flex flex-col items-center justify-center p-10 mx-12 bg-gray-100 border rounded-lg shadow-2xl w-[280px] md:w-[300px] h-120'>
+          <img src="/verify.jpeg" alt="verfication" height="100" width="200"/>
+          <p className="mt-2 text-xl font-semibold text-center ">Upload your payment screenshot for verification</p>
         </div>
         </div>
        </div>
