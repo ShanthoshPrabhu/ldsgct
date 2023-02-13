@@ -13,7 +13,10 @@ const Payment = () => {
       setShowToast(false);
     }, 5000);
   };
-   const handleClickOnline = ()=>{
+  const handleClick = ()=>{
+    router.push("/")
+  }
+   const handleClickOnspot = ()=>{
     router.push("/onlinePay")
   }
   return (
