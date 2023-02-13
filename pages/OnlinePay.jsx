@@ -100,7 +100,7 @@ Once the payment is done, take a screenshot of the payment in a manner that the 
         </div>
         <div  className='flex flex-col items-center justify-center p-10 mx-12 bg-gray-800 border rounded-lg shadow-md shadow-yellow-500 w-[280px] md:w-[300px] h-120'>
           <img src="https://www.linkpicture.com/q/IMG-20230214-WA0002.jpg" alt="verfication" height="100" width="200"/>
-          <p className="mt-2 text-xl font-semibold text-center text-yellow-500">Upload your payment screenshot for verification</p>
+          <p className="mt-2 text-xl font-normal text-center text-yellow-500">Upload your payment screenshot for verification with you UPI transaction ID and Name</p>
         </div>
         </div>
        </div>
