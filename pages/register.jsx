@@ -21,13 +21,13 @@ const SignReg = () => {
          </div>
          <div className=''>
           <label className='font-bold'>
-            Username
+            Name
           </label>
            <div className='flex flex-row border-b border-slate-400' >
             <div className='mt-1.5 pr-2'>
              <ion-icon name="person-outline"></ion-icon>
             </div>
-             <input type="text" className="outline-none "   placeholder="Type Your Username" />
+             <input type="text" className="outline-none "   placeholder="Type Your Name" />
             </div>
          </div>
          <div className=''>

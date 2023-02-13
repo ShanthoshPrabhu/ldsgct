@@ -13,6 +13,7 @@ export default function Home() {
   const handleEvent = () => {
      router.push("/event/Events")
   }
+  
   return (
 
     <div>
@@ -25,8 +26,8 @@ export default function Home() {
       <main>
        <Navbar/>
       <div className='grid mt-20 mb-20 md:grid-cols-3 '>
-         <div className="flex-col items-center justify-center col-span-2 px-10 text-lg font-light leading-loose ">
-          <p className=""><span className="text-yellow-600  font-normal ml-10">O</span>ne of Coimbatore's largest events dedicated solely to celebrating the love of the English Language and its rich literature is back and ready to be the literary festival that will leave you in awe.
+         <div className="flex-col items-center justify-center col-span-2 px-10 text-lg font-light leading-loose mx-8">
+          <p className=""><span className="text-yellow-600 text-2xl font-normal ml-10">O</span>ne of Coimbatore's largest events dedicated solely to celebrating the love of the English Language and its rich literature is back and ready to be the literary festival that will leave you in awe.
           Over the years, Brainstrain has established itself as a grand arena where more than 200 literary intellectuals from across Coimbatore and other parts of the state come together.</p>
           <p className="">This event has its grand vision set fast on bringing together students from different disciplines and all walks of life to foster the spirit of friendly competition among peers while having fun in the various exciting events that they will be participating in.</p>
           <p className="">Naturally, we are extremely thrilled to invite you to be a part of GCT’s one and only intellectual challenge that will provide students with the perfect platform to put their mettle and passion to the test. So walk in challengers! Get ready to showcase your talents in a range of stimulating competitions and rise to the challenge while you duke it out for the win. Huddle up our fellow kindred souls, and celebrate the immortal beauty of English.</p>

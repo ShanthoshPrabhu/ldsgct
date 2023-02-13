@@ -5,8 +5,9 @@ import Footer from '../shared/Footer';
 
 const Payment = () => {
   const [showToast, setShowToast] = useState(false);
-
+  const router = useRouter();
   const handleSubmit = (e) => {
+    router.push("/verification")
     e.preventDefault();
     setShowToast(true);
     setTimeout(() => {
