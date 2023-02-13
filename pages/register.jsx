@@ -2,6 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/router';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import Navbar from '../shared/Navbar';
+import Footer from '../shared/Footer';
 
 
 const SignReg = () => {
@@ -10,6 +11,7 @@ const SignReg = () => {
    router.push("/payment")
   }
   return (
+    <>
    <div>
       <div><Navbar/></div>
       <div className="flex justify-center min-h-screen align-center bg-gradient-to-r from-[#FF9500] via-[#FFC300] to-[#FFEA00] mt-16 rounded-lg" >
@@ -79,6 +81,8 @@ const SignReg = () => {
        </div>
     </div>
    </div>
+   <Footer/>
+   </>
   )
 }
 

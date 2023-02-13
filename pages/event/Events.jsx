@@ -1,5 +1,6 @@
 import React from 'react'
 import Cards from '../../components/Cards';
+import Footer from '../../shared/Footer';
 import Navbar from '../../shared/Navbar';
 
 const Events = () => {
@@ -9,10 +10,11 @@ const Events = () => {
      <div className=''>
       <Navbar/>
      </div>
-    <div className='mt-20 mb-10'>
+    <div className='mt-20 mb-20'>
       <Cards/> 
      </div>
-    </div>
+      <Footer/>
+    </div> 
   )
 }
 
