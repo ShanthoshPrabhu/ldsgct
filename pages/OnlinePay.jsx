@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import Navbar from '../shared/Navbar'
+import Footer from '../shared/Footer';
 
 const Payment = () => {
   const [showToast, setShowToast] = useState(false);
@@ -50,7 +51,7 @@ const Payment = () => {
          >Submit</button>
          </form>
          {showToast && (
-          <div class="fixed bottom-0 mb-4 mr-4 p-4 bg-gray-800 rounded-lg text-white shadow-lg">
+          <div className="fixed bottom-0 mb-4 mr-4 p-4 bg-gray-800 rounded-lg text-white shadow-lg">
             <p>Thanks for Registering, we will contact you after verifying.</p>
           </div>
            )}
@@ -65,6 +66,7 @@ const Payment = () => {
        </div>
       </div>
      </div>
+     <Footer/>
     </>
 
   )

@@ -5,9 +5,8 @@ import Button from '../shared/Button';
 const Navbar = () => {
   let Links = [
     { name: 'Home', link: '/' },
-    { name: 'BrainStrain', link: '/event/Events' },
-    // { name: 'About', link: '/' },
-    // { name: 'Contact', link: '/' },
+    { name: 'Events', link: '/event/Events' },
+    { name: 'Register', link: '/register' },
   ];
   let [open, setOpen] = useState(false);
 
@@ -19,12 +18,12 @@ const Navbar = () => {
           <span className='pt-2 mr-1 text-3xl text-indigo-600'>
             <img className='' />
           </span>
-          <p className='ml-1 font-medium'>Literary And Debating Society</p>
+          <p className='ml-1 font-medium'>BrainStrain</p>
         </div>
 
         <div
           onClick={() => setOpen(!open)}
-          className='absolute text-3xl cursor-pointer right-8 top-6 md:hidden'
+          className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'
         >
           <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
         </div>

@@ -2,14 +2,16 @@ import React from 'react'
 import { useRouter } from 'next/router';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import Navbar from '../shared/Navbar';
+import Footer from '../shared/Footer';
 
 
 const SignReg = () => {
   const router = useRouter();
   const handleSubmit = () => {
-   router.push("/Payment")
+   router.push("/payment")
   }
   return (
+    <>
    <div>
       <div><Navbar/></div>
       <div className="flex justify-center min-h-screen align-center bg-gradient-to-r from-[#FF9500] via-[#FFC300] to-[#FFEA00] mt-16 rounded-lg" >
@@ -52,13 +54,13 @@ const SignReg = () => {
          </div>
          <div className=''>
           <label className='font-bold'>
-            Year of Study
+            Year of Graduation
           </label>
            <div className='flex flex-row border-b border-slate-400' >
             <div className='mt-1.5 pr-2'>
              <ion-icon name="library-outline"></ion-icon>
             </div>
-             <input type="number" className="outline-none "   placeholder="Type Your Year of Study" />
+             <input type="text" className="outline-none "   placeholder="Type Your Year of Graduation" />
             </div>
          </div>
          <div className=''>
@@ -79,6 +81,8 @@ const SignReg = () => {
        </div>
     </div>
    </div>
+   <Footer/>
+   </>
   )
 }
 
