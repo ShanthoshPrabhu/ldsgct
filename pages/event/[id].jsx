@@ -13,7 +13,7 @@ import Image from 'next/image';
 const EventPage = () => {
     const router = useRouter()
    const handleClick = () => {
-     router.push("register")
+     router.push("/register")
    }
   
   console.log("specificEvent", data )
@@ -30,15 +30,13 @@ return (
             <div className="w-full justify-center flex items-center bg-gradient-to-r from-[#FF9500] via-[#FFC300] to-[#FFEA00]" > 
              <div className="">
                <div><Navbar/></div>
-         
-               
                <div className='mt-28 sm:mt-30'> 
         {/*Event Details */}
                     <div className=''>
                       <div>
                         {/*Event Heading */}
                         <div className=''>
-                        <h1 className='text-4xl font-bold text-center text-white uppercase md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl' style={{ fontFamily: '"Vampire Wars", sans-serif' }} >{event.eventName} </h1>
+                        <h1 className=' text-4xl md:text-6xl md:font-light text-center text-white' >{event.eventName} </h1>
                         </div>
 
                               
@@ -47,25 +45,25 @@ return (
                         <div className='flex'>
                           <div> <LocationOnIcon/></div> 
                           <div>
-                            <div className='font-bold'> Location </div>  
+                            <div className='font-semibold'> Location </div>  
                             <div className='font-base'>{event.location}</div>
                           </div>
                         </div>
                         <div className='flex'> 
                           <div><EmojiEventsOutlinedIcon/></div>
                             <div>
-                            <div className='font-bold'>Prize</div>  
+                            <div className='font-semibold'>Prize</div>  
                             <div className='font-base'>₹{event.price}</div>
                           </div>
                         </div>
                         <div className='flex'> 
                           <div><LocalPhoneOutlinedIcon style={{height:"24px", width:"20px"}}/></div>
                             <div>
-                            <div className='font-bold'>Phone</div>  
+                            <div className='font-semibold'>Phone</div>  
                             <div className='font-base'>₹{event.rules.Contact.Phone}</div>
                           </div>
                         </div>
-                        <div className='w-32 p-4 text-center text-white bg-red-500 rounded-md' onClick={handleClick}>
+                        <div className='w-32 p-4 text-center text-white bg-red-500 rounded-md cursor-pointer' onClick={handleClick}>
                           Register
                         </div>
                     </div>
@@ -101,9 +99,6 @@ return (
                     </div>
                     </div>
                </div>
-             
-                   
-               
               </div> 
             </div>
        </div>

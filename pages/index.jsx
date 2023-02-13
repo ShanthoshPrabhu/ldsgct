@@ -20,9 +20,9 @@ export default function Home() {
       ></script>
       </Head>
 
-      <main className="bg-black">
+      <main>
        <Navbar/>
-      <div className='grid grid-cols-3 mt-20 text-white'>
+      <div className='grid grid-cols-3 mt-20'>
          <div className="px-10 col-span-2 text-lg font-light leading-loose flex-col justify-center items-center">
           <p className="">One of Coimbatore's largest events dedicated solely to celebrating the love of the English Language and its rich literature is back and ready to be the literary festival that will leave you in awe.</p>
           <p className="">Over the years, Brainstrain has established itself as a grand arena where more than 200 literary intellectuals from across Coimbatore and other parts of the state come together. This event has its grand vision set fast on bringing together students from different disciplines and all walks of life to foster the spirit of friendly competition among peers while having fun in the various exciting events that they will be participating in.</p>

@@ -17,20 +17,20 @@ const Payment = () => {
     router.push("/")
   }
    const handleClickOnspot = ()=>{
-    router.push("/OnlinePay")
+    router.push("/onlinePay")
   }
   return (
     <> 
     <Navbar/>
     <div className='flex items-center justify-center min-h-screen bg-gradient-to-r from-[#FF9500] via-[#FFC300] to-[#FFEA00] '>   
      <div className='container' >
-        <div className='flex items-center justify-center h-16 mt-10 text-3xl font-bold text-white md:text-5xl md:font-base'>
+        <div className='flex items-center justify-center h-16 mt-0 text-3xl font-bold text-white md:text-5xl md:font-base'>
             Payment
        </div>
       <div 
       className='grid justify-center grid-flow-row cursor-pointer md:grid-flow-col gap-y-24 md:gap-x-24 mt-14 md:mt-28'
-      onClick={handleClickOnspot}>
-       <div className='flex flex-col items-center justify-center h-48 mx-12 bg-gray-100 border rounded-lg shadow-2xl sm:h-56 w-72 sm:w-96 '>
+     >
+       <div className='flex flex-col items-center justify-center h-48 mx-12 bg-gray-100 border rounded-lg shadow-2xl sm:h-56 w-72 sm:w-96 '  onClick={handleClickOnspot}>
          <div className='text-center ' >Pay through Online method</div>
         </div>
         <div className='flex flex-col items-center justify-center h-48 mx-12 bg-gray-100 border rounded-lg shadow-2xl sm:h-56 w-72 sm:w-96 '
@@ -43,7 +43,7 @@ const Payment = () => {
           <button>Cancel</button>
         </div>
          {showToast && (
-          <div class="fixed bottom-0 mb-4 mr-4 p-4 bg-gray-800 rounded-lg text-white shadow-lg">
+          <div class="fixed bottom-20 mb-12 mr-4 p-4 bg-gray-800 rounded-lg text-white shadow-lg">
             <p>Thanks for Registering, we will contact you after verifying.</p>
           </div>
            )}

@@ -47,7 +47,7 @@ const Payment = () => {
          >Submit</button>
          </form>
          {showToast && (
-          <div className="fixed bottom-0 mb-4 mr-4 p-4 bg-gray-800 rounded-lg text-white shadow-lg">
+          <div className="fixed bottom-20 mb-4 mr-4 p-4 bg-gray-800 rounded-lg text-white shadow-lg">
             <p>Thanks for Registering, we will contact you after verifying.</p>
           </div>
            )}
