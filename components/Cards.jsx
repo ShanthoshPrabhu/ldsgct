@@ -2,6 +2,7 @@ import React from 'react';
 import data from "../Components/EventData";
 import Card from "../Components/Card";
 import { useRouter } from 'next/router';
+import Navbar from '../shared/navbar';
 
 const Cards = () => {
    

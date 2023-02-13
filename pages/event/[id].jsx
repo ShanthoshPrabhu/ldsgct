@@ -7,6 +7,8 @@ import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
 import Button from "../../shared/Button"
 import data from "../../shared/specificdata.json"
+import Image from 'next/image';
+import Navbar from '../../shared/Navbar'
 
 const EventPage = () => {
   console.log("specificEvent", data )
@@ -16,89 +18,61 @@ const EventPage = () => {
   // Get the event details based on the id
   
   const event = data.find(item => item.link == id);
- console.log("event", event)
-  return (
-    // <div className="bg-red-500">
-    //   {event && ( 
-    //     <>
-    //         <div className='m-20 '>
-    //   <div className='text-6xl font-base'>
-    //     JAM
-    //   </div>
-    //   <div className='grid grid-cols-2 mt-10'>
-    //     <div className='grid grid-flow-row'>
-    //       <div className='grid grid-cols-2 '>
-    //         <div className='flex flex-row justify-center pt-10 pb-10 ml-8 mr-8 border border-white shadow-md'>
-    //           <img src={event.src} alt="" />
-    //           <div className='pb-1'><LocationOnIcon /></div>
-    //           <div>Location</div>
-    //         </div>
-    //         <div className='flex flex-row justify-center gap-2 pt-10 pb-10 ml-8 mr-8 border-white shadow-md' >
-    //           <div className='pb-1'><CalendarTodayOutlinedIcon /></div>
-    //           <div>Date</div>
-    //         </div>
-    //       </div>
-    //       <div className='grid grid-cols-2 mt-8 '>
-    //         <div className='flex flex-row justify-center gap-2 pt-10 pb-10 ml-8 mr-8 border-white shadow-md'>
-    //           <div className='pb-1'><AccessTimeOutlinedIcon /></div>
-    //           <div>Time</div>
-    //         </div>
-    //         <div className='flex flex-row justify-center gap-2 pt-10 pb-10 ml-8 mr-8 border-white shadow-md' >
-    //           <div className='mb-2'><LocalPhoneOutlinedIcon /></div>
-    //           <div>Phone Number</div>
-    //         </div>
-    //       </div>
-    //       <div className='grid grid-cols-2 mt-8'>
-    //         <div className='flex flex-row justify-center gap-2 pt-10 pb-10 ml-8 mr-8 border-white shadow-md'>
-    //           <div className='pb-4'><EmojiEventsOutlinedIcon /></div>
-    //           <div>Price Amount</div>
-    //         </div>
-    //       </div>
-    //       <div className='mt-8'>
-    //         {/* <Button>Login to Register</Button> */}
-    //       </div>
-    //     </div>
-    //     {/* fuck */}
-    //     <div className='grid grid-flow-row'>
-    //       <div className='font-base'>
+ console.log("event", event.description)
+return (    
+       <div>
+            <div>
+                <div className='flex justify-center min-h-screen mx-auto text-white'> 
+      {/*Bg Image*/}
+                    <div className='relative  opacity-[.5] min-h-screen max-w-screen' style={{backgroundImage: `url(${event.bs})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                      <img src={event.bs} alt="" className='' />
+                    </div>
+        {/*Event Details */}
+                    <div className='absolute'>
+                      <div>
+                        {/*Event Heading */}
+                        <div className=''>
+                        <h1 className='text-4xl font-bold text-center text-red-900 md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl' style={{ fontFamily: '"Vampire Wars", sans-serif' }} >{event.eventName} </h1>
+                        </div>
+                        {/*Event Content */}
+                      <div>
+                        {/*Event Description and Rules */}
+                          <div className="m-10 2xl:m-20 xl:m-20 ">
+                            {/*Event Description */}
+                                <div className='text-black '>
+                                                <div className='font-bold text-red-900 text-lg mb-5 xl:text-3xl 2xl:text-3xl lg:2xl md:2xl sm:lg'>Event Description:</div>
+                                                <div className='text-sm xl:text-xl 2xl:text-xl md:text-lg lg:text-lg  sm:text-base font-semibold leading-7 2xl:leading-10 xl:leading-10 lg:leading-9 md:leading-8'>{event.description}</div>
+                                </div>
+                            {/*Event Rules */}    
+                                <div className='text-black'>
+                                  <div className='font-bold text-red-900 text-lg my-5 xl:text-3xl 2xl:text-3xl lg:2xl md:2xl sm:lg'>
+                                    Rules:
+                                  </div>
+                                  {
+                                    event.rules.Prelims && (
+                                      <div className='text-sm xl:text-xl 2xl:text-xl md:text-lg lg:text-lg sm:text-base font-semibold leading-7 2xl:leading-10 xl:leading-10 lg:leading-9 md:leading-8'>
+                                      <div className=''>{event.rules.Prelims.PrelimsDetails}</div>
+                                      <div className=''>{event.rules.Finals.FinalsDetails}</div>
+                                      </div>
+                                    )
+                                  }
+                              </div>
+                        </div>
 
-
-    //       </div>
-    //       <div className='font-semibold'>Guidelines</div>
-    //       <div className='font-semibold'>Rules and Regulations</div>
-    //       <div className='font-semibold'>Prizes</div>
-    //     </div>
-    //   </div>
-    // </div>
-    //       {/* Display other details of the event here */}
-    //     </>
-    //   )}
-    // </div>
-    <div className='bg-white'>
-      <div>
-         <div className=''>
-           <div className='flex max-w-lg gap-20 mx-auto mt-[25%] bg-red-100 '> 
-              <div className='flex'>
-                <div> <LocationOnIcon/></div> 
-                <div> Location </div>  
-              </div>
-              <div className='flex'> 
-                <div><EmojiEventsOutlinedIcon/></div>
-                <div>Prize</div>
-              </div>
-               <div className='flex'> 
-                <div><CalendarTodayOutlinedIcon style={{height:"24px", width:"20px"}}/></div>
-                <div>Date</div>
-              </div>
-              <div className='w-24 text-center text-white bg-red-500 rounded-md '>Register</div>
-           </div>
-         </div>
-      </div>
-    </div>
-  );
-};
+                      </div>
+                              
+                            
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+              Hi
+            </div>
+       </div>
+);
+}
 
 export default EventPage;
-
 
 
