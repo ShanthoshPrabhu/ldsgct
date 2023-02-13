@@ -6,8 +6,8 @@ const Navbar = () => {
   let Links = [
     { name: 'Home', link: '/' },
     { name: 'BrainStrain', link: '/event/Events' },
-    { name: 'About', link: '/' },
-    { name: 'Contact', link: '/' },
+    // { name: 'About', link: '/' },
+    // { name: 'Contact', link: '/' },
   ];
   let [open, setOpen] = useState(false);
 
@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
 
         <ul
-          className={`font-medium  md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9  duration-500 ease-in ${
+          className={`font-medium  md:flex md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9  duration-500 ease-in ${
             open ? 'top-20 ' : 'top-[-490px]'
           }`}
         >
