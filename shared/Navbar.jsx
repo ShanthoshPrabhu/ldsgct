@@ -31,14 +31,14 @@ const Navbar = () => {
 
         <div
           onClick={() => setOpen(!open)}
-          className='text-3xl absolute right-8 top-3.5 cursor-pointer md:hidden'
+          className='text-3xl absolute right-8 top-5 cursor-pointer md:hidden text-yellow-500'
         >
-          <ion-icon name={open ? 'close' : 'menu'} className=''></ion-icon>
+          <ion-icon name={open ? 'close' : 'menu'} className="text-white" />
         </div>
 
         <ul
           className={`font-medium  md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-gray-800 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9  duration-500 ease-in ${
-            open ? 'top-16 ' : 'top-[-490px]'
+            open ? 'top-16' : 'top-[-490px]'
           }`}
         >
           {Links.map((link) => (
