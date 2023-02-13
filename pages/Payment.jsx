@@ -1,25 +1,34 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 
 const Payment = () => {
+  const router = useRouter();
+  const handleClickOnline = ()=>{
+    router.push("/OnlinePay")
+  }
+   const handleClickOnspot = ()=>{
+    router.push("/Onspot")
+  }
   return (
     <> 
-    <div className='bg-gradient-to-r from-red-200 to-red-500 min-h-screen justify-center items-center flex'>   
+    <div className='flex items-center justify-center min-h-screen bg-gradient-to-r from-red-200 to-red-500'>   
      <div className='container' >
-        <div className='flex justify-center items-center h-16 text-3xl md:text-5xl md:font-base mt-10 md:-mt-20'>
+        <div className='flex items-center justify-center h-16 mt-10 text-3xl md:text-5xl md:font-base'>
             Payment
        </div>
-      <div className='grid grid-flow-row md:grid-flow-col justify-center gap-y-24 md:gap-x-24 mt-14 md:mt-28'>
-       <div className='border bg-gray-100 w-96 h-56 shadow-2xl rounded-sm'>
-         <div className='text-center'>Pay By UPI Id</div>
-         <a href="" className='flex justify-center text-center align-middle'>something something</a>
-       </div>
-        <div className='border bg-white w-96 h-56 mb-16 shadow-2xl rounded-sm'>
-         <div className='text-center'>Pay By QR Code</div>
-         <a href="" className='flex justify-center text-center align-middle'>something something</a>
-       </div>
+      <div 
+      className='grid justify-center grid-flow-row cursor-pointer md:grid-flow-col gap-y-24 md:gap-x-24 mt-14 md:mt-28'
+      onClick={handleClickOnline}>
+       <div className='grid items-center justify-center h-56 bg-gray-100 border rounded-sm shadow-2xl w-96'>
+         <div className='text-center ' >Pay through Online method</div>
+        </div>
+        <div className='grid items-center justify-center h-56 bg-white border rounded-sm shadow-2xl w-96'
+        onClick={handleClickOnspot}>
+         <div className='text-center'>On the spot registration</div>
+        </div>
        </div> 
        <div className='flex justify-center mt-10 md:mt-20'>
-        <div className='border-2 p-3 text-center text-white bg-gradient-to-r from-red-200 to-red-500 rounded-md hover:bg-yellow-500 duration-500 w-40 md:w-48'>
+        <div className='w-40 p-3 text-center text-white duration-500 border-2 rounded-md bg-gradient-to-r from-red-200 to-red-500 hover:bg-yellow-500 md:w-48'>
           <button>Cancel</button>
         </div>
        </div>
