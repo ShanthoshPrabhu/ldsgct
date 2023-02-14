@@ -9,13 +9,14 @@ const Events = () => {
   const handleRegister = () => {
     router.push("/register")
   }
+  const value = '  All the below events can be participated by just paying the General Event Fee using the above "Register" button. Click on the below events to know individual event details.'
   return (
     <div className="flex flex-col items-center justify-center bg-white">
      <div className=''>
       <Navbar/>
      </div>
      <div className='items-center justify-center p-4 mx-10 font-normal text-gray-800 bg-yellow-500 border rounded-md mt-28 text-md'>
-      All the below events can be participated by just paying the General Event Fee using the above "Register" button. Click on the below events to know individual event details.
+     {value}
      </div>
      <div className='mt-8 text-4xl font-light'>
       Events

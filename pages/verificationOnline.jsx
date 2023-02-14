@@ -3,7 +3,7 @@ import React from 'react'
 import Footer from '../shared/Footer';
 import Navbar from '../shared/Navbar';
 
-const verificationOnline = () => {
+const VerificationOnline = () => {
   const router = useRouter();
   const handleHome = () => {
     router.push("/")
@@ -30,4 +30,4 @@ const verificationOnline = () => {
   )
 }
 
-export default verificationOnline
+export default VerificationOnline
