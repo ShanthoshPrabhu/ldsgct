@@ -1,20 +1,43 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import Navbar from '../shared/Navbar'
 import Footer from '../shared/Footer';
 import { async } from '@firebase/util';
 import { db, storage } from '../firebase';
 import { getDownloadURL, ref, uploadString } from 'firebase/storage';
-import { doc, updateDoc } from 'firebase/firestore';
+import { arrayUnion, collection, doc, getDocs, updateDoc } from 'firebase/firestore';
 import { useSession } from 'next-auth/react';
 
 const Payment = () => {
   const [showToast, setShowToast] = useState(false);
   const [file, setFile] = useState(null);
-  // const { data: session } = useSession();
-  const session = {
-    email:'shan@gmail.com'
-  }
+  const [user,setUser]=useState([])
+  const { data: session } = useSession();
+  console.log('user',user)
+  // if(!session){
+  //   return <Login/>
+  // }
+  useEffect(()=>{
+   getUsers();
+  },[])
+  async function getUsers(){
+    const userRef = collection(db, "users");
+    
+    getDocs(userRef).then((snapshot)=>{
+      // console.log('snapshot.docs',snapshot.docs)
+      let value=[]
+      snapshot.docs.forEach((doc)=>{
+        value.push({...doc.data(),userId:doc.id})
+      })
+      // console.log('value',value)
+      const usercheck = value?.filter(filteredusers =>filteredusers?.sessionemail == session?.user?.email)
+      console.log('check',usercheck)
+     if(usercheck && usercheck[0]){
+      return setUser(usercheck[0]);
+     } 
+    })
+    
+   }
   const router = useRouter()
 //  console.log('file',file)
   function addImage (e) {
@@ -32,14 +55,14 @@ const Payment = () => {
   console.log('file',file)
 }
 async function uploadData(){
-  const imageRef = ref(storage, `payments/${session?.email}/image`);
+  const imageRef = ref(storage, `payments/${session?.user.email}/image`);
   console.log('imgref',imageRef)
     if (file) {
         await uploadString(imageRef, file, "data_url")
         .then(async () => {
           const downloadURL = await getDownloadURL(imageRef);
-          await updateDoc(doc(db, "register", '4CVUbS4n0D213OOKiaMt'), {
-            image: downloadURL,
+          await updateDoc(doc(db, "users",user.userId ), {
+            image: arrayUnion(downloadURL),
           });
         });
      console.log('success')
