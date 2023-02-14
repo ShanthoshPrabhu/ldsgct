@@ -7,7 +7,6 @@ import { db, storage } from '../firebase';
 import { getDownloadURL, ref, uploadString } from 'firebase/storage';
 import { arrayUnion, collection, doc, getDocs, updateDoc } from 'firebase/firestore';
 import { useSession } from 'next-auth/react';
-import LoadingScreen from '../components/Loadingscreen';
 
 const Payment = () => {
   const [showToast, setShowToast] = useState(false);

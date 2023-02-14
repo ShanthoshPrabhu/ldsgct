@@ -8,7 +8,7 @@ import Footer from "../shared/Footer.jsx"
 import { useSession } from 'next-auth/react';
 import Login from '../components/Login';
 import Loginpage from './login';
-import LoadingScreen from '../components/Loadingscreen';
+import LoadingScreen from '../components/LoadingScreen';
 const SignReg = () => {
   const { data: session } = useSession();
   console.log('session',session)
