@@ -2,10 +2,19 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import Navbar from '../shared/Navbar';
 import Footer from '../shared/Footer';
+import { useSession } from 'next-auth/react';
+// import Login from '../components/Login';
+import Loginpage from './login';
 
 const Payment = () => {
   const router = useRouter();
    const [showToast, setShowToast] = useState(false);
+   const { data: session } = useSession();
+
+  if(!session){
+    return <Loginpage/>
+  }
+
    const handleClickSpot = (e) => {
     e.preventDefault();
     setShowToast(true);
@@ -29,9 +38,9 @@ const Payment = () => {
         </div>
          <div class=" text-center pt-4 lg:px-4 rounded-lg w-lg">
       <div class="p-2 bg-yellow-600 items-center text-indigo-100 leading-none rounded-lg flex lg:inline-flex mx-10 md:mx-0" role="alert">
-        <span class="flex rounded-full bg-gray-800 uppercase px-2 py-1 text-xs font-bold mr-3">Pay</span>
-        <span class="font-semibold mr-2 text-left flex-auto">Attention English enthusiasts! Register for Brainstrain today and avail the early bird offer for just Rs 150 instead of Rs 180. Hurry up ladies and gentlemen, the offer stands until 18.02.23!</span>
-        <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+        <span className="flex rounded-full bg-gray-800 uppercase px-2 py-1 text-xs font-bold mr-3">Pay</span>
+        <span className="font-semibold mr-2 text-left flex-auto">Attention English enthusiasts! Register for Brainstrain today and avail the early bird offer for just Rs 150 instead of Rs 180. Hurry up ladies and gentlemen, the offer stands until 18.02.23!</span>
+        <svg className="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
       </div>
         </div> 
         <div 

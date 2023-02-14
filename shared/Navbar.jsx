@@ -2,11 +2,15 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Button from '../shared/Button';
 import { useRouter } from 'next/router';
+import { useSession } from 'next-auth/react';
 
 const Navbar = () => {
+  const { data: session } = useSession();
+  console.log('session',session)
   let Links = [
     { name: 'Home', link:'/'},
     { name: 'Events', link: '/event/Events' },
+    {name:session?'Logout':'Login',link:session?'logout':'login'}
     // { name: 'Register', link: '/register' },
   ];
   let [open, setOpen] = useState(false);

@@ -5,7 +5,12 @@ import Navbar from '../shared/Navbar';
 import {addDoc,collection,doc,serverTimestamp,updateDoc} from "@firebase/firestore";
 import { db } from '../firebase';
 import Footer from "../shared/Footer.jsx"
+import { useSession } from 'next-auth/react';
+import Login from '../components/Login';
+import Loginpage from './login';
 const SignReg = () => {
+  const { data: session } = useSession();
+  console.log('session',session)
   const router = useRouter();
   const [name,setname]=useState('');
   const [email,setEmail]=useState('');
@@ -13,8 +18,12 @@ const SignReg = () => {
   const [gradYear,setGradYear]=useState('');
   const[phNumber,setPhNumber]=useState('');
   const [error,seterror]=useState('')
-
+  
+  if(!session){
+    return <Loginpage/>
+  }
  async function registerDetails(){
+ 
   if(!name || !email || !gradYear || !phNumber || !college){
     return seterror('Kindly fill all of your details')
   }
@@ -32,9 +41,12 @@ const SignReg = () => {
       college:college,
       gradYear:gradYear,
       phNumber:phNumber,
+      sessionname:session.user.name,
+      sessionemail:session.user.email,
       timestamp:serverTimestamp()
     }
-      await addDoc(collection(db,'register'),Data)
+    
+      await addDoc(collection(db,'users'),Data)
   }
 
     router.push("/payment")
