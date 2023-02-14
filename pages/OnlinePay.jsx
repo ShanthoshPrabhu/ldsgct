@@ -79,7 +79,7 @@ Once the payment is done, take a screenshot of the payment in a manner that the 
          <div className='font-bold text-center text-yellow-500'>Click to pay through UPI Id</div>
         </div>
         <div className='flex flex-col items-center justify-center h-48 mx-12 bg-gray-800 border rounded-lg shadow-md shadow-yellow-500 sm:h-56 w-72 sm:w-96'>
-        <div className='mb-4 text-xl font-light text-center text-yellow-500'>9894578288</div>
+        <div className='mb-4 text-xl font-light text-center text-yellow-500'>89252 34490</div>
          <div className='h-10 font-bold text-center text-yellow-500'>Pay through Phone Number</div>
          <div className='h-10 font-light text-center text-white'>You can pay the registration fee to this number</div>
          
