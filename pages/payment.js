@@ -15,13 +15,7 @@ const Payment = () => {
     return <Loginpage/>
   }
 
-   const handleClickSpot = (e) => {
-    e.preventDefault();
-    setShowToast(true);
-    setTimeout(() => {
-      setShowToast(false);
-    }, 5000);
-  };
+  
   const handleClickOnline = ()=>{
     router.push("/onlinePay")
   }
