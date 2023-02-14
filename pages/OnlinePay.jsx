@@ -112,7 +112,7 @@ Once the payment is done, take a screenshot of the payment in a manner that the 
        <div className='flex flex-col items-center justify-center h-48 p-10 mx-12 bg-gray-800 border rounded-lg shadow-md shadow-yellow-500 sm:h-56 w-72 sm:w-96'>
        <input type="file" id="file-input"  onChange={(e)=>addImage(e)} className="mx-auto md:mx-auto md:ml-8 text-yellow-500" />
         <button  
-        className=" text-white mt-5 bg-gradient-to-r  from-[#FF9500] via-[#FFC300] to-[#FFEA00] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+        className=" text-black mt-5 bg-yellow-600 hover:bg-white focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
         onClick={uploadData} 
          >Submit</button>
          {showToast && (
