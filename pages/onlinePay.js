@@ -7,6 +7,7 @@ import { db, storage } from '../firebase';
 import { getDownloadURL, ref, uploadString } from 'firebase/storage';
 import { arrayUnion, collection, doc, getDocs, updateDoc } from 'firebase/firestore';
 import { useSession } from 'next-auth/react';
+import LoadingScreen from '../components/Loadingscreen';
 
 const Payment = () => {
   const [showToast, setShowToast] = useState(false);
@@ -15,15 +16,17 @@ const Payment = () => {
   const { data: session } = useSession();
   const [fileName,setFileName]=useState('')
   console.log('user',user)
-  // if(!session){
-  //   return <Login/>
-  // }
+  const [loading,setLoading]=useState(false)
+
+//   if(loading){
+//     return <LoadingScreen/>
+//   }
   if(user.length === 0){
     getUsers();
   }
-  useEffect(()=>{
-    getUsers();
-  },[])
+//   useEffect(()=>{
+//     getUsers();
+//   },[])
   async function getUsers(){
     const userRef = collection(db, "users");
     
@@ -72,9 +75,11 @@ function copyToClipboard(){
 const [upiId,setUpiId] = useState("harishhar2304@oksbi")
 
 async function uploadData(){
+    setLoading(true)
   const imageRef = ref(storage, `payments/${session?.user.email + fileName} `);
   console.log('imgref',imageRef)
     if (file) {
+        
         await uploadString(imageRef, file, "data_url")
         .then(async () => {
           const downloadURL = await getDownloadURL(imageRef);
@@ -83,8 +88,9 @@ async function uploadData(){
           });
         });
      console.log('success')
-     router.push('/verificationOnline')
       }
+      setLoading(false)
+      router.push('/verificationOnline')
 }
   return (
     <> 
@@ -139,6 +145,7 @@ Once the payment is done, take a screenshot of the payment in a manner that the 
        <input type="file" id="file-input"  onChange={(e)=>addImage(e)} className="mx-auto text-yellow-500 md:mx-auto md:ml-8" />
         <button  
         className=" text-black mt-5 bg-yellow-600 hover:bg-white focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+        disabled={loading}
         onClick={uploadData} 
          >Submit</button>
          {showToast && (

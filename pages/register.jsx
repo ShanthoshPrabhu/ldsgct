@@ -8,10 +8,12 @@ import Footer from "../shared/Footer.jsx"
 import { useSession } from 'next-auth/react';
 import Login from '../components/Login';
 import Loginpage from './login';
+import LoadingScreen from '../components/Loadingscreen';
 const SignReg = () => {
   const { data: session } = useSession();
   console.log('session',session)
   const router = useRouter();
+  const [loading,setLoading]=useState(false)
   const [name,setname]=useState('');
   const [email,setEmail]=useState('');
   const [college,setCollege]=useState('');
@@ -31,8 +33,11 @@ const SignReg = () => {
   if(!session){
     return <Loginpage/>
   }
+  if(loading){
+    return <LoadingScreen/>
+  }
  async function registerDetails(){
- 
+ setLoading(true)
   if(!name || !email || !gradYear || !phNumber || !college){
     return seterror('Kindly fill all of your details')
   }
@@ -67,8 +72,8 @@ const SignReg = () => {
     
       await addDoc(collection(db,'users'),Data)
   }
-
-    // router.push("/payment")
+   setLoading(false)
+    router.push("/payment")
   }
   
   return (
