@@ -21,9 +21,9 @@ const Payment = () => {
   if(user.length === 0){
     getUsers();
   }
-//   useEffect(()=>{
-  
-//   },[])
+  useEffect(()=>{
+    getUsers();
+  },[])
   async function getUsers(){
     const userRef = collection(db, "users");
     
