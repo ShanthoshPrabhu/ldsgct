@@ -13,13 +13,17 @@ const Payment = () => {
   const [file, setFile] = useState(null);
   const [user,setUser]=useState([])
   const { data: session } = useSession();
+  const [fileName,setFileName]=useState('')
   console.log('user',user)
   // if(!session){
   //   return <Login/>
   // }
-  useEffect(()=>{
-   getUsers();
-  },[])
+  if(user.length === 0){
+    getUsers();
+  }
+//   useEffect(()=>{
+  
+//   },[])
   async function getUsers(){
     const userRef = collection(db, "users");
     
@@ -40,10 +44,14 @@ const Payment = () => {
    }
   const router = useRouter()
 //  console.log('file',file)
+
   function addImage (e) {
     const reader = new FileReader();
   //  console.log(e)
+//   console.log('e.target.files',e.target.files[0].name)
    if (e.target.files[0]) {
+    // console.log('e.target.files[0]',e.target.files[0].name)
+    setFileName(e.target.files[0].name)
     reader.readAsDataURL(e.target.files[0]);
   }
   console.log('red',reader)
@@ -53,9 +61,11 @@ const Payment = () => {
   }
   // console.log(file)
   console.log('file',file)
+  console.log('name',fileName)
 }
+// const ref = session.user.email + fileName
 async function uploadData(){
-  const imageRef = ref(storage, `payments/${session?.user.email}/image`);
+  const imageRef = ref(storage, `payments/${session?.user.email + fileName} `);
   console.log('imgref',imageRef)
     if (file) {
         await uploadString(imageRef, file, "data_url")
