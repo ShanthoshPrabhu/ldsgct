@@ -59,13 +59,13 @@
 },
 "contact": {
 "name": "Jennifer Cyril",
-"Phone": 9311176181
+"Phone": 9361176181
 }
 },
 {
 "id": 3,
 "link":"poem",
-"price": 0,
+"price": 1000,
 "location":"GCT",
 "date":"25/02/2023",
 "eventName": "Poem",
@@ -178,11 +178,11 @@
 {
 "id": 7,
 "link":"puzzle",
-"price": 3000,
+"price": 1000,
 "location":"GCT",
 "date":"25/02/2023",
 "eventName": "Puzzle & Crossword",
-"description": "If your neurons are up for puzzles, riddles and wordplays, you're in luck! Because this could very well be your new playground. Solve as many puz-zles as you can and make your way through crosswords while you paint the scene gold with your mastery.",
+"description": "If your neurons are up for puzzles, riddles and wordplays, you're in luck! Because this could very well be your new playground. Solve as many puzzles as you can and make your way through crosswords while you paint the scene gold with your mastery.",
 "guidelines":[["Maximum 2 per team"],["It consists of 2 rounds."]],
 "rules": {
 "rounds": [
@@ -235,7 +235,7 @@
 "location":"GCT",
 "date":"25/02/2023",
 "eventName": "Quiz",
-"description": "This intellectual event is here to ignite the awakening of the quiz aces and is a call to all the hardcore quizzers out there. Battle it all out shrewd quiz champs, and persevere for the win while you strain brains.",
+"description": "This intellectual event is here to ignite the awakening of the quiz aces and is a call to all the hardcore quizzers out there. Battle it all out shrewd quiz champs! Persevere for the win while you strain brains.",
 "guidelines":[["Two participants per team"],["It consists of 2 rounds."]],
 "rules": {
 "prelims": [
