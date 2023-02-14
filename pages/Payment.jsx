@@ -36,7 +36,7 @@ const Payment = () => {
           <div className='flex items-center justify-center h-16 mt-20 text-3xl font-normal text-black md:text-5xl md:font-base'>
               Payment
         </div>
-          <div class=" text-center pt-4 lg:px-4 rounded-lg w-lg">
+         <div class=" text-center pt-4 lg:px-4 rounded-lg w-lg">
       <div class="p-2 bg-yellow-600 items-center text-indigo-100 leading-none rounded-lg flex lg:inline-flex mx-10 md:mx-0" role="alert">
         <span className="flex rounded-full bg-gray-800 uppercase px-2 py-1 text-xs font-bold mr-3">Pay</span>
         <span className="font-semibold mr-2 text-left flex-auto">Attention English enthusiasts! Register for Brainstrain today and avail the early bird offer for just Rs 150 instead of Rs 180. Hurry up ladies and gentlemen, the offer stands until 18.02.23!</span>
@@ -46,17 +46,17 @@ const Payment = () => {
         <div 
         className='grid justify-center grid-flow-row mt-10 cursor-pointer md:grid-flow-col gap-y-24 md:gap-x-24 md:mt-14'
         >
-        <div className='flex flex-col items-center justify-center h-48 mx-12 bg-gray-800 border rounded-lg shadow-md shadow-yellow-700  sm:h-56 w-72 sm:w-96 '>
+        <div className='flex flex-col items-center justify-center h-48 mx-12 bg-gray-800 border rounded-lg shadow-md shadow-yellow-700 sm:h-56 w-72 sm:w-96 '>
           <div className='text-lg font-thin text-center text-yellow-500 ' >Pay through Online mode</div>
                  <button  
-                 className='p-2 mt-2 text-xs font-semibold text-center text-black bg-yellow-500 hover:bg-white  rounded-lg '
+                 className='p-2 mt-2 text-xs font-semibold text-center text-black bg-yellow-500 rounded-lg hover:bg-white '
                  onClick={handleClickOnline}>Pay ₹150  </button>
           </div>
-          <div className='flex flex-col items-center justify-center h-48 p-4 mx-12 bg-gray-800 border rounded-lg shadow-md shadow-yellow-700  sm:h-56 w-72 sm:w-96 '
+          <div className='flex flex-col items-center justify-center h-48 p-4 mx-12 bg-gray-800 border rounded-lg shadow-md shadow-yellow-700 sm:h-56 w-72 sm:w-96 '
           >
           {/* <img src="/onspot.jpeg" alt="onspot" className="absolute w-20 overflow-hidden opacity-25"/> */}
-          <div className='relative font-light text-center text-lg text-yellow-500'>On the Spot Registration</div>
-          <button onClick={handleClickOnspot} className='p-2 mt-2 text-xs font-semibold text-center text-black bg-yellow-500 hover:bg-white rounded-lg '>Pay ₹210  </button>
+          <div className='relative text-lg font-light text-center text-yellow-500'>On the Spot Registration</div>
+          <button onClick={handleClickOnspot} className='p-2 mt-2 text-xs font-semibold text-center text-black bg-yellow-500 rounded-lg hover:bg-white '>Pay ₹210  </button>
            {showToast && (
             <div class="fixed bottom-0 mb-16 mr-4 p-4 bg-gray-800 rounded-lg text-white shadow-lg">
               <p>Thanks for Registering, we will contact you soon.</p>
