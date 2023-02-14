@@ -102,7 +102,7 @@ Once the payment is done, take a screenshot of the payment in a manner that the 
          <div className='font-bold text-center text-yellow-500'>Click to pay through UPI Id</div>
         </div>
         <div className='flex flex-col items-center justify-center h-48 mx-12 bg-gray-800 border rounded-lg shadow-md shadow-yellow-500 sm:h-56 w-72 sm:w-96'>
-        <div className='mb-4 text-xl font-light text-center text-yellow-500'>9894578288</div>
+        <div className='mb-4 text-xl font-light text-center text-yellow-500'>89252 34490</div>
          <div className='h-10 font-bold text-center text-yellow-500'>Pay through Phone Number</div>
          <div className='h-10 font-light text-center text-white'>You can pay the registration fee to this number</div>
          
@@ -112,7 +112,7 @@ Once the payment is done, take a screenshot of the payment in a manner that the 
        <div className='flex flex-col items-center justify-center h-48 p-10 mx-12 bg-gray-800 border rounded-lg shadow-md shadow-yellow-500 sm:h-56 w-72 sm:w-96'>
        <input type="file" id="file-input"  onChange={(e)=>addImage(e)} className="mx-auto md:mx-auto md:ml-8 text-yellow-500" />
         <button  
-        className=" text-white mt-5 bg-gradient-to-r  from-[#FF9500] via-[#FFC300] to-[#FFEA00] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+        className=" text-black mt-5 bg-yellow-600 hover:bg-white focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
         onClick={uploadData} 
          >Submit</button>
          {showToast && (
