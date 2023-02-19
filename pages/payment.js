@@ -38,7 +38,7 @@ const Payment = () => {
                 className="p-2 mt-2 text-xs font-semibold text-center text-black bg-yellow-500 rounded-lg hover:bg-white "
                 onClick={handleClickOnline}
               >
-                Pay ₹150{" "}
+                Pay ₹180{" "}
               </button>
             </div>
             <div className="flex flex-col items-center justify-center h-48 p-4 mx-12 bg-gray-800 border rounded-lg shadow-md shadow-yellow-700 sm:h-56 w-72 sm:w-96 ">
