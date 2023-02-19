@@ -22,7 +22,7 @@ const SignReg = () => {
   const [error,seterror]=useState('')
   const [quizSelect,setQuizSelect]=useState(false);
   const [poemSelect,setPoemSelect]=useState(false);
-  const[microtaleSelect,setMicrotaleSelect]=useState(false);
+  const [microtaleSelect,setMicrotaleSelect]=useState(false);
   const [unominutoselect,setUnominutoSelect]=useState(false);
   const [jamSelect,setJamSelect]=useState(false);
   const [shipwreckSelect,setShipwreckSelect]=useState(false);
@@ -80,7 +80,7 @@ const SignReg = () => {
     <>
    <div>
       <div><Navbar/></div>
-      <div className="flex justify-center min-h-screen align-center bg-white mt-16 rounded-lg mb-16" >
+      <div className="flex justify-center min-h-screen mt-16 mb-16 bg-white rounded-lg align-center" >
        <div className='grid justify-center grid-flow-row px-20 py-10 my-8 space-y-8 align-middle bg-white border-2 rounded-lg shadow-lg md:px-36 '>
          <div className='grid justify-center text-2xl font-normal'>
            Register
@@ -93,7 +93,7 @@ const SignReg = () => {
             <div className='mt-1.5 pr-2'>
              <ion-icon name="person-outline"></ion-icon>
             </div>
-             <input type="text" className="outline-none " value={name} onChange={e=>setname(e.target.value)}  placeholder="Type Your Name" />
+             <input type="text" className="outline-none " value={name} onChange={e=>setname(e.target.value)}  placeholder="Type Your Name"  required />
             </div>
          </div>
          <div className=''>
@@ -101,10 +101,13 @@ const SignReg = () => {
             Email-Id
           </label>
            <div className='flex flex-row border-b border-slate-400' >
-            <div className='mt-1.5 pr-2'>
+            <div className='mt-1.5 pr-2 '>
              <ion-icon name="mail-outline"></ion-icon>
             </div>
-             <input type="email" className="outline-none " value={email} onChange={e=>setEmail(e.target.value)}  placeholder="Type Your Email-Id" />
+               <div className='flex flex-row'>
+                 <input type="email" className="outline-none " value={email} onChange={e=>setEmail(e.target.value)}  placeholder="Type Your Email-Id" required />
+                 <p>(Only give your professional email id)</p>
+               </div>
             </div>
          </div>
          <div className=''>
@@ -115,7 +118,7 @@ const SignReg = () => {
             <div className='mt-1.5 pr-2'>
              <ion-icon name="book-outline"></ion-icon>
             </div>
-             <input type="text" className="outline-none " value={college} onChange={e=>setCollege(e.target.value)}  placeholder="Type Your College Name" />
+             <input type="text" className="outline-none " value={college} onChange={e=>setCollege(e.target.value)}  placeholder="Type Your College Name" required />
             </div>
          </div>
          <div className=''>
@@ -126,7 +129,7 @@ const SignReg = () => {
             <div className='mt-1.5 pr-2'>
              <ion-icon name="library-outline"></ion-icon>
             </div>
-             <input type="text" className="outline-none " value={gradYear} onChange={e=>setGradYear(e.target.value)}  placeholder="Type Your Year of Graduation" />
+             <input type="text" className="outline-none " value={gradYear} onChange={e=>setGradYear(e.target.value)}  placeholder="Type Your Year of Graduation" required />
             </div>
          </div>
          <div className=''>
@@ -137,71 +140,71 @@ const SignReg = () => {
             <div className='mt-1.5 pr-2'>
              <ion-icon name="call-outline"></ion-icon>
             </div>
-             <input type="text" className="outline-none" value={phNumber} onChange={e=>setPhNumber(e.target.value)} placeholder="Type Your Phone Number" />
+             <input type="text" className="outline-none" value={phNumber} onChange={e=>setPhNumber(e.target.value)} placeholder="Type Your Phone Number" required />
             </div>
 
          </div>
-         <div className=' grid grid-flow-row grid-cols-2  text-sm md:text-base'>
-         <div className=' flex justify-between  m-2 '>
+         <div className='grid grid-flow-row grid-cols-2 text-sm md:text-base'>
+         <div className='flex justify-between m-2 '>
           <label className='font-medium text-yellow-500'>
               Quiz
             </label>
-            <input type='checkbox' className='  cursor-pointer m-2 p-1 text-base' value={quizSelect} onChange={e=>setQuizSelect(!quizSelect)}/>
+            <input type='checkbox' className='p-1 m-2 text-base cursor-pointer ' value={quizSelect} onChange={e=>setQuizSelect(!quizSelect)}/>
          </div>
-         <div className='flex justify-between  m-2'>
+         <div className='flex justify-between m-2'>
           <label className='font-medium text-yellow-500'>
               Poem 
             </label>
-            <input type='checkbox' className=' cursor-pointer m-2 p-1 text-base' value={poemSelect} onChange={e=>setPoemSelect(!quizSelect)}/>
+            <input type='checkbox' className='p-1 m-2 text-base cursor-pointer ' value={poemSelect} onChange={e=>setPoemSelect(!quizSelect)}/>
          </div>
-         <div className='flex justify-between  m-2'>
+         <div className='flex justify-between m-2'>
           <label className='font-medium text-yellow-500'>
               Puzzle
             </label>
-            <input type='checkbox' className=' cursor-pointer m-2 p-1 text-base' value={puzzleSelect} onChange={e=>setPuzzleSelect(!quizSelect)}/>
+            <input type='checkbox' className='p-1 m-2 text-base cursor-pointer ' value={puzzleSelect} onChange={e=>setPuzzleSelect(!quizSelect)}/>
          </div>
-         <div className='flex justify-between  m-2'>
+         <div className='flex justify-between m-2'>
           <label className='font-medium text-yellow-500'>
               Potpourri
             </label>
-            <input type='checkbox' className=' cursor-pointer m-2 p-1 text-base' value={potpourriSelect} onChange={e=>setpotpourriSelect(!quizSelect)}/>
+            <input type='checkbox' className='p-1 m-2 text-base cursor-pointer ' value={potpourriSelect} onChange={e=>setpotpourriSelect(!quizSelect)}/>
          </div>
-         <div className='flex justify-between  m-2'>
+         <div className='flex justify-between m-2'>
           <label className='font-medium text-yellow-500'>
               Dumb Charades
             </label>
-            <input type='checkbox' className=' cursor-pointer m-2 p-1 text-base' value={dumbCSelect} onChange={e=>setDumbCSelect(!quizSelect)}/>
+            <input type='checkbox' className='p-1 m-2 text-base cursor-pointer ' value={dumbCSelect} onChange={e=>setDumbCSelect(!quizSelect)}/>
          </div>
-         <div className='flex justify-between  m-2'>
+         <div className='flex justify-between m-2'>
           <label className='font-medium text-yellow-500'>
              Shipwreck
             </label>
-            <input type='checkbox' className=' cursor-pointer m-2 p-1 text-base' value={shipwreckSelect} onChange={e=>setShipwreckSelect(!quizSelect)}/>
+            <input type='checkbox' className='p-1 m-2 text-base cursor-pointer ' value={shipwreckSelect} onChange={e=>setShipwreckSelect(!quizSelect)}/>
          </div>
-         <div className='flex justify-between  m-2'>
+         <div className='flex justify-between m-2'>
           <label className='font-medium text-yellow-500'>
               Jam
             </label>
-            <input type='checkbox' className=' cursor-pointer m-2 p-1 text-base' value={jamSelect} onChange={e=>setJamSelect(!quizSelect)}/>
+            <input type='checkbox' className='p-1 m-2 text-base cursor-pointer ' value={jamSelect} onChange={e=>setJamSelect(!quizSelect)}/>
          </div>
-         <div className='flex justify-between  m-2'>
+         <div className='flex justify-between m-2'>
           <label className='font-medium text-yellow-500'>
            Uno Minuto
             </label>
-            <input type='checkbox' className=' cursor-pointer m-2 p-1 text-base' value={unominutoselect} onChange={e=>setUnominutoSelect(!quizSelect)}/>
+            <input type='checkbox' className='p-1 m-2 text-base cursor-pointer ' value={unominutoselect} onChange={e=>setUnominutoSelect(!quizSelect)}/>
          </div>
-         <div className='flex justify-between  m-2'>
+         <div className='flex justify-between m-2'>
           <label className='font-medium text-yellow-500'>
               Microtale
             </label>
-            <input type='checkbox' className=' cursor-pointer m-2 p-1 text-base' value={microtaleSelect} onChange={e=>setMicrotaleSelect(!quizSelect)}/>
+            <input type='checkbox' className='p-1 m-2 text-base cursor-pointer ' value={microtaleSelect} onChange={e=>setMicrotaleSelect(!quizSelect)}/>
          </div>
 
          </div>
          <div className='grid justify-center'>
             <button className='p-3 text-center text-white duration-500 bg-gray-800 border-2 rounded-md hover:bg-yellow-500'  onClick={registerDetails}>Proceed to Pay</button>
           </div>
-          {error ? (<div className=' text-red-600 text-base'>{error}</div>):null}
+          {error ? (<div className='text-base text-red-600 '>{error}</div>):null}
        </div>
     </div>
    </div>
