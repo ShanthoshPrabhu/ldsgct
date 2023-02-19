@@ -106,7 +106,7 @@ const SignReg = () => {
             </div>
                <div className='flex flex-row'>
                  <input type="email" className="outline-none " value={email} onChange={e=>setEmail(e.target.value)}  placeholder="Type Your Email-Id" required />
-                 <p>(Only give your professional email id)</p>
+                 <p>(Only give your gmail id)</p>
                </div>
             </div>
          </div>
