@@ -7,7 +7,7 @@ import Navbar from '../../shared/Navbar';
 const Events = () => {
    const router = useRouter();
   const handleRegister = () => {
-    router.push("/register")
+    router.push("/closePayment")
   }
   const value = '  All the below events can be participated by just paying the General Event Fee using the above "Register" button. Click on the below events to know individual event details.For group events, each participants should register individually.'
   return (
